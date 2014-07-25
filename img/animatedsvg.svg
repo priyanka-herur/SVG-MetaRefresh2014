@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1900 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Animating pen strokes in svg</title>
+  <desc>
+    This shows how to animate stroking, to simulate a pen drawing.
+    
+    The important parts are the 'stroke-dashoffset' and the corresponding 'stroke-dasharray' values,
+    which should really be picked depending on the computed length of the path in question.
+    Here they've been hardcoded, but they could just as well be taken live from the browser, here's
+    how (note that each browser may give slightly different values, but are usually close to the same):
+    
+        alert(document.getElementByClass('text').getTotalLength())
+    
+    This can be written directly to the document by javascript if you need to animate a dynamic path.
+  </desc>
+  <style>
+    .tekst { 
+      fill:none;
+      stroke:#cb98ff;
+      stroke-width:5px;
+      stroke-linecap:round;
+    }
+    .one {
+      stroke-dasharray:3000,3000;
+    }
+    .two {
+      stroke-dasharray:3309,3309;
+    }
+    text { 
+      font-size:40px;
+      font-family:stix;
+      text-anchor:middle;
+    }
+  </style>
+<script type="text/javascript">
+<!--        alert(document.getElementById('strikeout').getTotalLength());-->
+
+</script>
+  <g id="layer1">
+ <path id="strikeout" class='tekst one' d="M 125.085 34.8984 C 119.9502 62.9727 116.8037 92.4604 116.3584 120.9971 C 116.2139 130.2666 116.8984 140.8252 124.0791 146.6885 C 107.1914 146.1465 90.2222 138.0088 73.9512 142.5625 C 70.7285 143.4648 69.1973 146.5947 66.0815 148.3203 C 67.0952 125.7656 75.6284 104.1006 89.8623 86.5747 C 93.0674 82.6284 96.5527 78.9155 99.7261 74.9434 C 103.6143 69.9766 125.085 34.8984 125.085 34.8984 Z">
+     
+<animate attributeName="stroke-dashoffset" from="3309" to="0" dur="8s" begin="rect.click;0s" fill="freeze"/>
+    </path>
+ 
+<!--      <path id="strikeout2" stroke="#cb98ff" fill="#ffe57f" stroke-dashoffset="3309" class='tekst two' d="M 108 312 C 108 312 107 194 190 202 C 273 210 290 268 273 346 C 256 424 448 486 440 366 C 432 246 486 75 566 179 C 646 283 578 561 681 457 C 784 353 659 88 774 212 C 889 336 772 572 888 458 C 1004 344 844 48 958 166 C 1072 284 1048 478 1048 478 ">-->
+      <path id="mypath" class='tekst one' stroke-dashoffset="1158" d="M 126.3594 1.9756 C 121.9521 0.0127 117.2314 0.9229 112.6377 2.3984 C 108.1167 3.8506 104.0718 6.9307 99.3389 7.3159 C 96.543 7.5435 93.6802 6.8008 90.9492 7.4409 C 89.0347 7.8896 87.3374 8.9878 85.7876 10.1978 C 83.9082 11.665 82.1797 13.3257 80.6387 15.145 C 88.0405 10.7192 97.5723 10.0674 105.5078 13.4438 C 100.6929 13.9595 94.8257 15.3247 93.5786 20.0044 C 96.0098 17.769 99.4463 16.6724 102.7231 17.0859 C 104.8872 17.3594 106.9985 18.5928 109.1509 18.2363 C 113.8135 17.4634 116.8384 8.876 125.8135 10.8828 L 126.3594 1.9756 Z" fill="#3e454c">
+     <animate attributeName="stroke-dashoffset" from="1158" to="0" dur="8s" begin="rect.click;0s" fill="freeze"/>
+    </path>
+  </g>
+
+  <rect id="rect" width="100%" height="100%" fill="none" pointer-events="all"/>
+</svg>

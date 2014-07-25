@@ -1,0 +1,99 @@
+@charset "UTF-8";
+button {
+    width: 100px;
+    max-width: 150px;
+    height: 32px;
+    background: #999;
+    font-size: 16px;
+    color: #eee;
+    border: #444;
+}
+    /*        Bird right wing animation*/
+        .flappybird .bird .right_wing
+        {
+        -webkit-animation-name: flapright;
+        -webkit-animation-duration: 0.05s; 
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;
+/*    	-webkit-animation-delay: -1.5s;*/
+        -webkit-animation-direction: alternate;
+        -webkit-transform-origin: 50%;
+    
+        animation-name: flapright;
+        animation-duration: 0.05s; 
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+/*        animation-delay: -1.5s;*/
+        animation-direction: alternate;
+        transform-origin: 50%;
+        
+/*        -moz-animation: none;*/
+    }   /*        Bird right wing animation*/
+        #interactivePath .bird .right_wing
+        {
+        -webkit-animation-name: flapright;
+        -webkit-animation-duration: 0.05s; 
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;
+/*    	-webkit-animation-delay: -1.5s;*/
+        -webkit-animation-direction: alternate;
+        -webkit-transform-origin: 50%;
+    
+        animation-name: flapright;
+        animation-duration: 0.05s; 
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: -1.5s;
+        animation-direction: alternate;
+        transform-origin: 50%;
+        
+    }
+    
+          @-webkit-keyframes flapright { 
+        0% { -webkit-transform:translate(3px,1px) rotate(5deg);}
+        100% { -webkit-transform: translate(0px,5px) rotate(-5deg); }
+    }
+    
+    @keyframes flapright { 
+        0% { transform: translate(3px,1px) rotate(-5deg); }
+        100% { transform: translate(0px,5px) rotate(2deg); }
+    }
+
+.fragment.cloudIcon {
+    border:0; margin: -50px 0 0 -600px;
+    -webkit-filter:grayscale(1);
+    filter:grayscale(1);
+    
+}
+.fragment.cloudIcon:hover {
+    filter:grayscale(0);
+    -webkit-filter:grayscale(0);
+}
+#map .india {
+ stroke: #eee;    
+}
+#map .india #chakra {
+    transition: .6s fill;
+    fill: #D3D3D3;
+    stroke: #D3D3D3;
+}
+
+#map .india #top { 
+     stroke: #eee;
+    transition: .6s fill; fill: #D3D3D3;
+}
+#map .india #top:hover { 
+    fill: #ff9933; 
+}
+#map .india #center_portion  { 
+     stroke: #eee;
+    transition: .6s fill; fill: #D3D3D3;
+}
+
+#map .india #bottom { 
+     stroke: #eee;
+    transition: .6s fill; fill: #D3D3D3;
+}
+#map .india #bottom:hover { 
+    fill: #22aa22; 
+}
