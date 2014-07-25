@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 40 30">
+<g id="question" transform="translate(13,3)">
+<rect x="1" y="0" width="14" height="1" fill="chocolate"/>
+<rect x="0" y="1" width="16" height="15"/>
+<rect x="0" y="1" width="1" height="14" fill="chocolate"/>
+<rect x="1" y="1" width="14" height="14" fill="orange"/>
+<rect x="2" y="2" width="1" height="1"/>
+<rect x="13" y="2" width="1" height="1"/>
+<rect x="2" y="13" width="1" height="1"/>
+<rect x="13" y="13" width="1" height="1"/>
+<path d="M5,5h1v-1h5v1h1v4h-2v2h-2v-2h1v-1h1v-3h-3v3h-2z M8,12h2v2h-2z"/>
+<path d="M4,4h1v-1h5v1h1v4h-2v2h-2v-2h1v-1h1v-3h-3v3h-2z M7,11h2v2h-2z" fill="chocolate">
+	<animate attributeName="fill" values="chocolate;red;yellow;darkorange" dur="2" begin="0" calcMode="discrete" repeatCount="indefinite"/>
+</path>
+</g>
+<g id="head" transform="translate(15,22)">
+<path d="M1,4v2h2v1h1v1h5v-1h-3v-1h1v-1h1v1h3v-2h-3v-1h-1v2h-1v-2h-2v1h1v2h-2v-2z" fill="orange"/>
+<path d="M2,3v-1h1v-1h5v1h3v1z" fill="red"/>
+<path d="M4,8h-3v-2h-1v-2h1v-2h1v-1h1v-1h5v1h3v1h1v1h-1v1h1v2h-1v1h-1v1h-1v-1h-3v-1h1v-1h-1v-2h1v2h1v1h3v-2h-3v-1h3v-1h-3v-1h-5v1h-1v1h2v1h1v2h-2v-2h-2v2h2v1h1z"/>
+</g>
+</svg>

@@ -1,0 +1,94 @@
+<svg width="100%" height="100%"
+	xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+	 onload="startup(evt)">
+>
+<script>
+<![CDATA[
+
+var xmlns="http://www.w3.org/2000/svg"
+count=0
+off=0
+id=0
+var AN=null
+var xlinkns = "http://www.w3.org/1999/xlink";
+function startup(evt) {
+	Root = document.documentElement;
+	A=getRect()
+	rightedge=A.x
+	bottomedge=A.y
+	gg = document.getElementById("gg");
+	while ((off-1)*xs/2<rightedge) makeNew()
+}
+
+function getRect(){
+    try{var rect={x: Root.viewport.width,y:Root.viewport.height}}
+    catch(e){var rect={x: window.innerWidth,y:window.innerHeight}}
+    return rect
+}
+
+xs=200;
+ys=173.2;
+scale=.5
+cc=0
+function makeNew(){
+	cc++
+	if (ys*count>bottomedge/scale) {off++; count=0}
+	var clone=gg.cloneNode("true")
+	var x=(off - (count%2)/2)*xs
+	var y=Math.floor(ys*count)
+	clone.setAttributeNS(null,"transform","scale("+scale+") translate("+x+" "+y+")")
+	var FP=clone.getElementsByTagName("path")
+	FP.item(0).setAttributeNS(null,"fill", color())
+	FP.item(1).setAttributeNS(null,"fill", grey())
+	FP.item(3).setAttributeNS(null,"fill", grey())
+	Root.appendChild(clone);
+	count++
+
+}
+function rotate(evt){
+	evt.target.setAttributeNS(null,"fill", color())
+}
+
+function color(){
+	var r=parseInt(100+Math.random()*155)
+	var g=parseInt(100+Math.random()*155)
+	var b=parseInt(100+Math.random()*155)
+	return "rgb("+r+","+g+","+b+")";
+}
+function grey(){
+	var c=parseInt(100+Math.random()*155)
+	var d=parseInt(100+Math.random()*155)
+	return "rgb("+d+","+(d)+","+c+")";
+}
+//]]>
+</script>
+
+<defs id="DEF">
+<linearGradient id="g"  fy="0" gradientTransform="rotate(60 .5 .5)">
+<animateTransform attributeName="gradientTransform" 
+          type="rotate" values="0 .5 .5; 360 .5 .5" dur="7s" repeatCount="indefinite"  />    
+	<stop id="offa" offset="0" stop-color="#000">
+	</stop>
+	<stop id="offb" offset=".25" stop-color="#800">
+	<animate id="AN" attributeName="offset" dur="4s" values="0;1;0"
+		repeatCount="indefinite" />
+	</stop>
+	<stop id="offc" offset="1" stop-color="black"/>
+	
+</linearGradient> 
+</defs>
+
+<rect x="0" y="0" width="100%" height="100%" fill="url(#g)"/>
+<g id="gg" transform="scale(0.5)">
+<!--
+<path id="P" d="M -100 173.2 L 100 173.2 L 0 0 z" fill="url(#g)" onclick="rotate(evt)"/>
+<path id="P3" d="M -33.3 173.2 L 66.7 113.5 L -33.3 57.5 z" fill="url(#g)" onclick="rotate(evt)"/>
+<path id="P2" d="M 0 0 L 100 173.2 L 200 0 z"  fill="none"  onclick="rotate(evt)"/>
+<path id="P4" d="M 66.7 113.5 L 166.7 57.5 L 66.7 0 z"  fill="url(#g)"  onclick="rotate(evt)"/>
+-->
+</g>
+</svg>
+
+
+

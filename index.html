@@ -1,79 +1,924 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Svg-metarefresh2014 : Modern Graphics for the Web- MetaRefresh 2014" />
+<head>
+    <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <title>SVG</title>
 
-    <title>Svg-metarefresh2014</title>
-  </head>
+    <meta name="description" content="SVG for the Web: MetaRefresh 2014">
+    <meta name="author" content="Priyanka">
 
-  <body>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/priyanka-herur/SVG-MetaRefresh2014">View on GitHub</a>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-          <h1 id="project_title">Svg-metarefresh2014</h1>
-          <h2 id="project_tagline">Modern Graphics for the Web- MetaRefresh 2014</h2>
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/max2013.css" id="theme">
+    <link rel="stylesheet" href="css/svganimations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+    </script>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/priyanka-herur/SVG-MetaRefresh2014/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/priyanka-herur/SVG-MetaRefresh2014/tarball/master">Download this project as a tar.gz file</a>
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+    <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="js/animations.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1><br></h1>
+                <h1>Inline SVG</h1>
+                <div>
+                    <svg id="modern_graphics_start" viewBox="0 0 652 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="652px" height="108px">
+                       <defs>
+                           <path id="textOnPath" fill="none" stroke="none" d="M 34.225 6.7889 C 34.225 6.7889 292.075 218.7389 618.775 6.7889 " />
+                       </defs>
+                        <g transform="scale(0.8) translate(10,30)">
+                            <use xlink:href="#textOnPath" fill="none" stroke="red"/>
+                            <text xmlns="http://www.w3.org/2000/svg" id="T" fill="#333" font-size="46">
+                                <textPath xlink:href="#textOnPath" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    MODERN GRAPHICS FOR THE WEB
+                                </textPath>
+                            </text>
+                        </g>
+                    </svg>
+                </div>
+
             </section>
-        </header>
-    </div>
+            <section>
+                <h2>AGENDA</h2>
+                <ul class="contentPointers">
+                    <li><span>Overview of SVG</span></li>
+                    <li><span>SVG in HTML</span></li>
+                    <li><span>SVG Elements</span></li>
+                    <li><span>Animations</span></li>
+                    <li><span>Interactions</span></li>
+                </ul>
+            </section>
+            <section>
+                <h2>WHY SVG?</h2>
+                <img src="img/svgobjects/adventureco_logo.png" class="fragment demoimage pixelImage">
+                <img src="img/svgobjects/adventureco_logo.svg" class="fragment demoimage svgImage">
+            </section>
+            <section>
+                <h2>Working with HTML, SVG and CSS</h2>
+                <img width="500" src="img/allOfThem.svg">
+            </section>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+            <section>
+                <h2>SVG is..</h2>
+                <div class="fragment stylable image1">
+                <img src="img/svgprops/stylable.svg">
+                </div>
+                <div class="fragment stylable image2">
+                <img src="img/svgprops/responsive.svg">
+                </div>
+                <div class="fragment stylable image3">
+                <img src="img/svgprops/interaction.svg">
+                </div>
+                <div class="fragment stylable image4">
+                <img src="img/svgprops/animable.svg">
+                </div>
+                <ul class="contentPointers">
+                    <li><span> Stylable</span></li>
+                    <li><span> Responsive</span></li>
+                    <li><span> Interactive</span></li>
+                    <li><span> Animatable</span></li>
+                    <li><span> Scriptable</span></li>
+                </ul>
+            </section>
+            <section>
+                <div>
+                    <h2><span>Including SVG in HTML</span><br></h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="fragment roll-in row">SVG as image
+                                    <br><pre><code>&lt;img src="image.svg"&gt;</code></pre>
+                                </td>
+                                <td class="fragment roll-in row">SVG as object
+                                    <br><pre><code>&lt;object data="image.svg"&gt;
+&lt;embed src="image.svg"&gt;</code></pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fragment roll-in row">SVG as document
+                                    <br><pre><code>&lt;iframe src="image.svg"></code></pre>
+                                </td>
+                                <td class="fragment roll-in row">Inline SVG
+                                    <br><pre><code>&lt;p>&lt;svg>...&lt;/svg>&lt;/p></code></pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+            <section>
+                <h2>SVG ELEMENTS<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display: none;">
+</h2>
+                <div class="fragment elems" style="opacity:1; margin: -200px 0 0 100px">
+                    <img src="img/svgobjects/rect.svg" style="border:0">
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+                    <code style="width:300px; height:100px; color:#222; margin-left:-300px; font-size:14pt;">&lt;rect x="" y=""
+width="" fill=""/&gt;</code>
+                </div>
+                <div class="fragment elems" style="opacity:1; margin: -200px 0 0 600px">
+                    <img src="img/svgobjects/text.svg" style="border:0;">
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+                    <code style="width:300px; height:100px; color:#222; margin-left:-230px; font-size:14pt;">&lt;text x="" y=""
+&gt;&lt;/text &gt;</code>
+                </div>
+                <div class="fragment elems" style="opacity:1; margin: 200px 0 0 40%">
+                    <img src="img/svgobjects/line.svg" style="border:0;">
+                    <code style="width:300px; height:100px; color:#222; margin-left:-280px; font-size:14pt;">&lt;line x1="" y1="" x2="" y2=""
+/&gt;</code>
+                </div>
+                <div class="fragment elems" style="opacity:1; margin: 200px 0 0 -10px">
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+                    <img src="img/svgobjects/polygon.svg" style="border:0">
+                    <code style="width:300px; height:100px; color:#222; margin-left:-180px; font-size:14pt;">&lt;polygon x="" y=""
+/&gt;</code>
+                </div>
+                <div class="fragment elems" style="opacity:1; margin: 200px 0 0 700px">
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+                    <img src="img/svgobjects/path.svg" style="border:0">
+                    <code style="width:300px; height:100px; color:#222; margin-left:-130px; font-size:14pt;">&lt;path d=""
+/&gt;</code>
+                </div>
+                <pre><code><div>
+<svg xmlns="http://www.w3.org/2000/svg">
+    //SVG stuff goes here
+</svg>
+</div> </code> </pre> 
+            </section>
+            <section>
+                <h2> STYLING</h2>
+                <ul class="contentPointers">
+                    <li>SVG gradients</li>
+                    <li>Clip Paths</li>
+                    <li>SVG filters</li>
+                    <li>CSS Styles</li>
+                    <li>Transforms</li>
+                </ul>
+                <img src="img/props/gradient.svg" class="fragment styl">
+                <div class="fragment clipPathImg">
+                    <svg id="clippath-Page%201" viewBox="0 0 400 352" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="400px" height="352px">
+                        <style>
+                            a image {
+                                -webkit-filter: grayscale(76%);
+                                opacity: 0.5;
+                                transition: 1s opacity;
+                            }
+                            a:hover image {
+                                opacity: 1;
+                            }
+                        </style>
+                        <g id="Layer%201">
+                            <clipPath id="heart-clipper">
+                                <path d="M 199.863 46.0292 C 241.2642 22.5649 283.8649 14.6278 317.8479 29.4398 C 361.0566 48.2708 369.1105 95.0349 363.7652 137.8314 C 360.1183 167.042 345.2336 194.2383 327.4191 217.8416 C 293.9433 262.1964 241.2048 303.1672 198.0569 320.0664 C 197.3714 320.335 196.1733 320.7677 195.4934 321.0239 C 194.5924 320.685 193.0985 320.1642 192.1906 319.8031 C 149.167 302.7441 96.8002 261.9674 63.4944 217.8416 C 45.6799 194.2383 30.7952 167.042 27.1497 137.8314 C 21.8044 95.0349 29.8582 48.2708 73.067 29.4398 C 107.0486 14.6278 149.6521 22.5649 191.0519 46.0292 L 195.4865 48.44 L 199.863 46.0292 Z" stroke="#3e454c" stroke-width="1" fill="none" />
+                            </clipPath>
+                            <image clip-path="url(#heart-clipper)" width="400" height="400" xlink:href="img/global-hot-spots-india.png" x="" y="-20" role="image"></image>
+                            <set attributeName="visibility" from="hidden" to="visible" begin="" end="" />
+                        </g>
+                    </svg>
+                </div>
+                <img class="fragment cloudIcon" src="img/cloudicon.svg" width="240px" height="240px" />
+                <img class="fragment styl1" src="img/props/transform.svg" width="240px" height="240px" />
+            </section>
+            <section>
+                <h2>SVG TEXT</h2>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="861px" height="100px" viewBox="0 0 861 98" enable-background="new 0 0 861 98" xml:space="preserve">
+                    <g>
+                        <path id="bezier" fill="none" stroke-width="2" stroke="red" d="M63.524,55c0,0,39-37,84-26s61,55,109,33s35-40,94-31s70,56.15,112,37.075s37-57.075,93-34.075
+		s70,53,102,33s39-51,100-27s32,29,32,29" />
+                    </g>
+                    <text xmlns="http://www.w3.org/2000/svg" id="T" fill="#333">
+                        <textPath xlink:href="#bezier" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            Text on path
+                        </textPath>
+                    </text>
+                </svg>
+                <pre style="width:1000px">
+                    <code><path id="bezier" stroke-width="2" stroke="red"
+                    d="M63.524"/>
+                    <text xmlns="http://www.w3.org/2000/svg" fill="#333">
+                    <textPath xlink:href="#bezier">
+                    Text on path
+                    </textPath>
+                    </text>
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <br>
+                <h2><span class="headerTextAnim">ANIMATIONS</span><br></h2>
+                <h2> SVG / CSS</h2>
+                <div>
+                    <br>
+                </div>
+            </section>
+            <section>
+                <section>
+                    <h2>CSS ANIMATIONS</h2>
+                    <div class="cssAnimationSec">
+                        <svg class="flappybird" viewBox="0 0 96 86" style="background-color:#ffffff00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="96px" height="76px">
+                            <g class="bird">
+                                <g class="right_bird">
+                                    <path d="M 55.7253 29.7687 C 55.7253 29.7687 57.6913 29.8964 58.8608 28.9026 C 60.8882 27.181 62.7339 25.2024 64.9175 23.7161 C 74.3452 17.2981 86.8237 21.2591 90.8784 31.9339 C 91.6069 33.848 95.9233 39.0003 95.9233 39.0003 C 95.9233 39.0003 92.1571 38.636 91.0321 39.7708 C 87.1903 41.4339 82.2261 47.4124 80.5874 51.2845 C 71.6675 72.3597 48.8647 81.2835 27.7534 72.0862 C 15.7847 66.8724 6.81 58.7523 2.1763 46.2669 C 0.562 41.9183 0.4849 37.4603 0.8765 32.9534 C 0.9702 31.8714 1.8872 29.8187 1.8872 29.8187 C 1.8872 29.8187 4.0229 30.3763 4.8501 31.138 C 7.7681 33.8255 11.3052 35.1155 15.1196 35.8235 C 15.8006 35.9506 16.8606 35.7153 17.4676 35.5522 C 17.4676 35.5522 39.8076 43.8289 55.7253 29.7687 Z" fill="#ed5c26" />
+                                    <path id="Ellipse" d="M 75.6987 33.7708 C 75.6987 31.5616 77.4896 29.7708 79.6987 29.7708 C 81.9079 29.7708 83.6987 31.5616 83.6987 33.7708 C 83.6987 35.98 81.9079 37.7708 79.6987 37.7708 C 77.4896 37.7708 75.6987 35.98 75.6987 33.7708 Z" fill="#ffffff" />
+                                </g>
+                                <g id="rightwing">
+                                    <path d="M 17.4773 41.5496 L 17.937 41.4153 C 17.937 41.4153 18.0737 39.6331 17.5444 38.7552 C 10.2065 26.594 21.6548 1.6819 21.6548 1.6819 L 22.4018 0.7669 C 22.4018 0.7669 33.8013 6.9759 38.8276 9.5833 C 47.8843 14.2825 55.4653 22.0784 55.1802 33.8187 C 55.1585 34.7105 55.3221 35.2999 55.6096 35.6476 C 55.6096 35.6476 39.9642 58.7087 17.4773 41.5496 Z" fill="#ed5c26" />
+                                    <path d="M 37.1577 40.7815 C 44.6421 40.8606 48.4448 35.1155 45.727 28.0179 C 43.3071 21.6937 38.1919 18.6175 32.2554 16.4798 C 29.2953 15.4138 26.2743 15.7672 26.2743 15.7672 C 26.2743 15.7672 24.4741 18.2773 24.0132 21.4925 C 22.4409 32.4583 28.0474 40.6849 37.1577 40.7815 Z" fill="#ffffff" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <button id="startFlap">start</button>
+                    <button id="stopFlap">stop</button>
+                </section>
+                <section>
+                    <span>SVG Elements</span>
+                    <pre><code>&lt;g class="bird"&gt;
+ &lt;g class="right_bird"&gt;
+  &lt;path d="M...Z" fill="#ed5c26"/&gt;
+  &lt;path d="M..." fill="#ffffff"/&gt;
+ &lt;/g&gt;
+ &lt;g id="rightwing"&gt;
+  &lt;path d="M ..Z" fill="#ed5c26"/&gt;
+   &lt;path d="M .. Z" fill="#ffffff"/&gt;
+ &lt;/g&gt;
+ &lt;/g&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <span>CSS</span>
+                    <pre><code class="codeSize">.bird .right_wing
+{
+ -webkit-animation-name: flapright;
+ -webkit-animation-duration: 0.05s; 
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-timing-function: ease-in-out;
+ -webkit-animation-direction: alternate;
+ -webkit-transform-origin: 50%;
+}   
+@-webkit-keyframes flapright { 
+ 0% { -webkit-transform:translate(3px,1px)}
+ 100% { -webkit-transform: translate(0px,5px)}
+}</code></pre>
+                </section>
+            </section>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+            <section>
+                <section>
+                    <h2>SVG ANIMATIONS</h2>
+                    <div>
+                        
+                        <svg id="svgAnim" class="flappybird" viewBox="0 0 1900 800" style="background-color:#ffffff00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="1900px" height="700px">
+                            <defs>
+                                <path id="followpath" stroke-dashoffset="3309" fill="none" stroke="#222" d="M 44 374 C 44 374 40 216 154 178 C 268 140 234 460 390 442 C 546 424 322 64 462 32 C 602 0 636 310 756 318 " />
+                            </defs>
+                            <g transform="translate(50,0)">
+                            <g id="startMotionAnimation" transform="translate(150, 0)" style="cursor: pointer;">
+                                <rect x="0" y="10" width="120" height="60"  fill="#aaa"></rect>
+                                <text x="40" y="48" font-family="Source Sans Pro" font-size="20" fill="#eee">Start</text>
+                            </g>
+                            <g id="motionAnimation" transform="translate(150, 0)" style="cursor: pointer;">
+                                <rect x="150" y="10" width="120" height="60" fill="#aaa"></rect>
+                                <text x="170" y="48" font-family="Source Sans Pro" font-size="20" fill="#eee">Show Path</text>
+                            </g>
+                            <g id="hidemotionAnimation" transform="translate(150, 0)" role="button" style="cursor: pointer;">
+                                <rect x="300" y="10" width="120" height="60" fill="#aaa"></rect>
+                                <text x="320" y="48" font-family="Source Sans Pro" font-size="20" fill="#eee" style="pointer-events: none;
+">Hide Path</text>
+                            </g>
+                            
+                            <g class="bird" transform="translate(0, 100)">
+                                <g class="right_bird">
+                                    <path d="M 55.7253 29.7687 C 55.7253 29.7687 57.6913 29.8964 58.8608 28.9026 C 60.8882 27.181 62.7339 25.2024 64.9175 23.7161 C 74.3452 17.2981 86.8237 21.2591 90.8784 31.9339 C 91.6069 33.848 95.9233 39.0003 95.9233 39.0003 C 95.9233 39.0003 92.1571 38.636 91.0321 39.7708 C 87.1903 41.4339 82.2261 47.4124 80.5874 51.2845 C 71.6675 72.3597 48.8647 81.2835 27.7534 72.0862 C 15.7847 66.8724 6.81 58.7523 2.1763 46.2669 C 0.562 41.9183 0.4849 37.4603 0.8765 32.9534 C 0.9702 31.8714 1.8872 29.8187 1.8872 29.8187 C 1.8872 29.8187 4.0229 30.3763 4.8501 31.138 C 7.7681 33.8255 11.3052 35.1155 15.1196 35.8235 C 15.8006 35.9506 16.8606 35.7153 17.4676 35.5522 C 17.4676 35.5522 39.8076 43.8289 55.7253 29.7687 Z" fill="#ed5c26" />
+                                    <path id="Ellipse" d="M 75.6987 33.7708 C 75.6987 31.5616 77.4896 29.7708 79.6987 29.7708 C 81.9079 29.7708 83.6987 31.5616 83.6987 33.7708 C 83.6987 35.98 81.9079 37.7708 79.6987 37.7708 C 77.4896 37.7708 75.6987 35.98 75.6987 33.7708 Z" fill="#ffffff" />
+                                </g>
+                                <g id="rightwing" class="right_wing">
+                                    <path d="M 17.4773 41.5496 L 17.937 41.4153 C 17.937 41.4153 18.0737 39.6331 17.5444 38.7552 C 10.2065 26.594 21.6548 1.6819 21.6548 1.6819 L 22.4018 0.7669 C 22.4018 0.7669 33.8013 6.9759 38.8276 9.5833 C 47.8843 14.2825 55.4653 22.0784 55.1802 33.8187 C 55.1585 34.7105 55.3221 35.2999 55.6096 35.6476 C 55.6096 35.6476 39.9642 58.7087 17.4773 41.5496 Z" fill="#ed5c26" />
+                                    <path d="M 37.1577 40.7815 C 44.6421 40.8606 48.4448 35.1155 45.727 28.0179 C 43.3071 21.6937 38.1919 18.6175 32.2554 16.4798 C 29.2953 15.4138 26.2743 15.7672 26.2743 15.7672 C 26.2743 15.7672 24.4741 18.2773 24.0132 21.4925 C 22.4409 32.4583 28.0474 40.6849 37.1577 40.7815 Z" fill="#ffffff" />
+                                </g>
+                                <animateMotion id="animatedMotionPath" begin="startMotionAnimation.click" dur="5s">
+                                    <mpath xlink:href="#followpath" />
+                                </animateMotion>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+                            </g>
+                            <use xlink:href="#followpath" visibility="hidden" transform="translate(0, 100)">
+                                <set attributeName="visibility" from="hidden" to="visible" begin="motionAnimation.click" end="hidemotionAnimation.click" />
+                            </use>
+                            </g>
+                        </svg>
+                    </div>
+                </section>
+                <section>
+                    <span>Define your Path</span>
+                    <pre><code style="width:1000px">&lt;defs&gt;
+&lt;path id="followpath" stroke-dashoffset="3309" d="M ..."/&gt;
+&lt;/defs&gt;</code></pre>
+                </section>
+                <section>
+                    <span>Flap and Fly</span>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                    <pre><code class="codeSize">&lt;g class="bird"&gt;
+ &lt;g class="right_bird"&gt;
+  ...
+ &lt;/g&gt;
+ &lt;g id="rightwing"&gt;
+  ...
+ &lt;/g&gt;
+&lt;animateMotion id="animatedMotionPath" 
+    begin="startMotionAnimation.click" dur="5s"&gt;
+  &lt;mpath xlink:href="#followpath"/&gt;
+ &lt;/animateMotion&gt;
+&lt;/g&gt;</code>
+                    </pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>LINE DRAWING</h2>
+                    <button id="startLineDraw">Start</button>
+                    <div>
+                        <svg viewBox="0 0 551 324" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="551px" height="324px">
+                            <g id="Layer%201">
+                                <path id="metare" stroke-dashoffset="3309" stroke-dasharray="3000,3000" d="M 9.5 323.5 C 9.5 280.9963 17.2985 233.5814 3.5 192.5 L 0.5 190.5 C 6.9149 190.7236 38.0581 245.2238 43.5 254.5 C 43.5083 241.961 46.554 172.4581 60.5 172.5 C 59.5506 172.0253 61.7921 171.1461 62.5 171.5 C 62.4949 221.0732 72.4216 270.5143 72.5 318.5 L 84.5 318.5 C 93.8712 298.1039 102.3284 283.6425 103.5 261.5 C 94.0073 261.3029 97.6152 264.4476 90.5 268.5 L 91.5 301.5 C 102.1081 315.632 112.4178 311.574 123.5 301.5 C 127.4924 281.019 137.0715 218.024 131.5 194.5 C 130.9313 192.0986 122.5597 171.5597 120.5 169.5 L 118.5 169.5 C 118.4646 196.8833 137.8647 254.4346 153.5 275.5 L 165.5 279.5 C 170.4638 266.8077 190.2716 209.5497 203.5 209.5 C 174.3722 207.5997 177.5 244.0119 177.5 264.5 C 210.0762 298.9213 195.5415 216.0149 195.5 204.5 C 195.6021 220.0407 208.4269 240.4205 213.5 255.5 L 220.5 258.5 C 228.5571 246.4113 232.0724 198.6621 222.5 188.5 C 222.3633 207.4728 231.3287 197.4622 243.5 203.5 C 245.7077 212.8399 249.4825 227.6729 255.5 235.5 L 263.5 235.5 C 277.0244 215.8897 276.5 202.2953 276.5 179.5 C 276.5 176.4268 272.3269 172.6731 274.5 170.5 L 269.5 170.5 C 255.507 190.3537 270.5683 227.2223 297.5 216.5 C 323.502 206.1479 316.7891 94.8676 311.5 71.5 L 310.5 71.5 C 310.4099 99.5518 352.1743 240.0212 376.5 251.5 C 376.5386 197.2217 379.0855 218.0711 346.5 176.5 L 329.5 171.5 C 354.8553 171.512 376.0054 131.6671 357.5 122.5 L 357.5 132.5 C 375.1866 139.0282 385.7605 160.8682 400.5 158.5 C 408.5003 157.2146 421.3353 95.5421 411.5 92.5 C 402.3517 89.6704 390.8114 135.7491 423.5 142.5 C 439.6617 112.1744 438.6179 101.0909 438.5 65.5 C 439.2833 81.1611 494.0383 104.7579 454.5 122.5 C 449.0684 124.9373 442.3447 124.9512 436.5 124.5 C 495.4822 126.1335 488.6729 37.2464 463.5 1.5 C 429.2795 -10.7388 480.2167 81.191 485.5 87.5 C 489.5296 92.3119 492.6557 98.9355 495.5 104.5 C 481.7842 90.8986 480.4423 80.0892 490.5 62.5 C 485.4507 51.6582 510.9473 68.4763 512.5 69.5 L 513.5 69.5 L 520.5 74.5 L 531.5 74.5 C 534.4714 69.5607 539.3222 65.3564 543.5 61.5 C 543.9247 56.034 547.895 50.1041 550.5 45.5 " stroke="#333" stroke-width="1" fill="none">
+                                    <animate attributeName="stroke-dashoffset" from="3309" to="0" dur="8s" begin="startLineDraw.click" fill="freeze" />
+                                </path>
+                                <path stroke-dasharray="3000,3000" stroke-dashoffset="3309" d="M 98.5 227.5 C 112.7734 227.4263 169.5633 206.2584 169.5 184.5 " stroke="#333" stroke-width="1" fill="none">
+                                    <animate attributeName="stroke-dashoffset" from="3309" to="7s" dur="8s" begin="startLineDraw.click" fill="freeze" />
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </section>
+                <section>
+                    <span>Draw</span>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+                    <pre><code >&lt;path stroke-dasharray="3000,3000"  
+        stroke-dashoffset="3309"  d="M ..." 
+        stroke="#333" stroke-width="1" fill="none"&gt;
+ &lt;animate attributeName="stroke-dashoffset" 
+        from="3309" to="7s" dur="8s" 
+        begin="startLineDraw.click" 
+        fill="freeze"/&gt;
+&lt;/path&gt;</code>
+                    </pre>
+                </section>
+            </section>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+            <section>
+                <h2>CSS or SVG?!</h2>
+            </section>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Svg-metarefresh2014 maintained by <a href="https://github.com/priyanka-herur">priyanka-herur</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+            <!--LINE DRAWING-->
+            <section>
+                <section>
 
-    
+                    <h2>Interaction</h2>
+                    <svg id="map" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="503px" height="561px" viewBox="0 0 503 561" enable-background="new 0 0 503 561" xml:space="preserve">
+                        <g class="india">
+                            <a xlink:href="" title="North" accesskey="a">
+                                <path id="top" d="M 360.005 174.0054 C 359.8779 174.0074 359.7772 174.0171 359.7081 174.0366 C 359.1559 174.1944 356.5544 176.7225 355.2133 176.8804 C 353.872 177.0382 352.6876 177.2033 351.5831 177.2033 C 350.4786 177.2033 350.7951 178.4649 350.9529 179.4116 C 351.1107 180.3583 352.534 181.0677 352.7706 181.6199 C 353.0073 182.1722 351.1934 184.5296 350.5623 185.2397 C 350.2648 185.5745 350.2515 186.2794 350.307 187.0939 L 364.432 187.0939 C 364.0668 186.5531 363.5727 185.6792 363.5727 185.1668 C 363.5727 184.4568 364.0553 183.3495 364.7654 182.2449 C 365.4754 181.1405 365.156 178.7808 365.156 178.3074 C 365.156 177.834 363.581 176.0086 363.2654 175.1408 C 362.9893 174.3814 360.8942 173.987 360.005 174.0054 L 360.005 174.0054 ZM 478.4789 136.8283 C 478.4134 136.8303 478.3506 136.8343 478.2914 136.8387 C 477.3447 136.9176 476.48 137.7477 475.2966 138.5367 C 474.1132 139.3256 471.4262 141.4522 470.9529 142.6356 C 470.4795 143.819 470.0089 144.3742 469.6143 145.0054 C 469.2199 145.6365 467.3178 146.2675 466.2133 145.5575 C 465.1088 144.8474 461.9577 143.9012 460.932 143.9012 C 459.9064 143.9012 459.0334 143.1187 458.2445 142.7242 C 457.4555 142.3297 457.2194 140.9877 456.5883 140.6721 C 455.9571 140.3565 455.5631 141.1404 454.932 142.245 C 454.3008 143.3495 452.3282 145.0149 451.2237 145.646 C 450.1192 146.2772 449.5698 147.5267 449.3331 148.5523 C 449.0964 149.5779 448.3096 150.2923 447.5206 151.3179 C 446.7317 152.3435 445.5414 154.8752 445.5414 154.8752 C 445.5414 154.8752 444.4416 154.9496 442.3904 155.3439 C 440.3391 155.7384 441.4465 156.7598 440.4998 156.8387 C 439.553 156.9176 438.2173 155.9794 437.2706 155.9794 C 436.3239 155.9794 436.0028 156.7633 435.6873 157.5523 C 435.3717 158.3412 435.1294 158.2679 434.656 158.5835 C 434.1826 158.8991 433.5576 160.9433 434.031 161.9689 C 434.5043 162.9946 434.2639 163.5478 433.8695 163.4689 C 433.475 163.39 432.6079 163.4699 431.6612 163.7866 C 430.7145 164.1022 430.8748 164.2554 430.8748 164.2554 C 430.8748 164.2554 429.2983 164.3409 428.5883 164.6564 C 427.8782 164.972 429.0611 166.0716 428.1143 166.2294 C 427.1676 166.3872 426.6101 167.4138 425.9789 167.7293 C 425.3478 168.0449 424.4 168.9167 424.4789 169.4689 C 424.5578 170.0212 426.2945 170.8073 425.9789 171.3596 C 425.6634 171.9118 424.5628 173.5714 422.906 174.2814 C 421.2492 174.9915 420.7731 174.8322 419.9841 174.4377 C 419.1952 174.0432 416.5105 174.7462 415.406 175.6929 C 414.3015 176.6396 414.3849 177.2741 412.807 176.9585 C 411.2292 176.6429 409.3333 174.2733 408.781 174.0366 C 408.2287 173.8 407.7602 174.5164 407.7602 174.9898 C 407.7602 175.4632 408.2289 177.3513 408.2289 177.6668 C 408.2289 177.9824 408.304 181.933 408.6195 182.4064 C 408.9351 182.8798 410.8327 182.8007 411.9373 182.9585 C 413.0417 183.1164 415.4153 183.5044 416.5987 184.1356 C 417.6428 184.6924 417.7566 185.6778 417.2289 187.0939 L 479.6508 187.0939 C 480.1172 186.7833 480.5386 186.5518 480.8175 186.5054 C 481.7642 186.3475 482.9423 182.5608 483.4945 181.6929 C 484.0468 180.825 484.6761 180.7457 486.8852 180.6668 C 489.0941 180.5879 487.6015 180.1217 488.3904 179.4116 C 489.1794 178.7016 489.0976 179.5627 490.281 179.5627 C 491.4644 179.5627 491.2494 178.4074 492.3539 177.7762 C 493.4584 177.1451 493.202 177.3551 493.8331 177.8283 C 494.4643 178.3017 495.3334 180.4308 496.3591 181.1408 C 497.3847 181.8508 497.7704 181.2256 498.3227 181.62 C 498.8749 182.0145 500.3791 181.8522 501.0102 181.5367 C 501.6414 181.2211 501.4812 180.1196 501.2445 179.094 C 501.0078 178.0684 499.9814 177.7475 499.1925 176.9586 C 498.4035 176.1696 497.6955 175.4684 497.38 174.995 C 497.0644 174.5217 496.118 172.31 496.2758 171.5211 C 496.4334 170.7322 498.8076 169.8575 499.281 169.5419 C 499.7544 169.2263 501.3269 166.385 501.9581 165.9117 C 502.5892 165.4383 502.9022 165.1316 503.2966 163.9482 C 503.6911 162.7648 502.9055 162.8414 501.88 161.5002 C 500.8543 160.159 502.5102 160.4688 502.5102 158.8909 C 502.5102 157.313 501.0917 158.1893 499.6716 158.0315 C 498.2515 157.8738 498.4845 157.3166 497.38 156.9221 C 496.2755 156.5277 496.117 157.4779 494.7758 157.6357 C 493.4345 157.7935 492.8028 156.8449 492.1716 156.2138 C 491.5405 155.5822 490.6772 155.6521 489.5727 155.5732 C 488.4682 155.4943 485.4658 157.7103 484.6768 157.0002 C 483.8879 156.2902 485.3073 155.6547 486.8852 154.2346 C 488.463 152.8145 489.6456 150.3739 489.6456 149.9794 C 489.6456 149.5849 488.4693 148.8679 488.3904 148.5523 C 488.3117 148.2368 487.8316 147.452 487.4373 147.0575 C 487.0428 146.663 486.8145 145.4038 486.5779 144.6148 C 486.3412 143.8259 485.7799 144.451 484.281 144.6877 C 482.7819 144.9244 483.6465 146.0305 483.0154 146.6617 C 482.3842 147.2928 481.8362 146.6657 481.5206 146.2711 C 481.205 145.8766 482.0019 144.458 482.3175 143.9846 C 482.6331 143.5113 484.3642 142.5689 484.9164 141.9377 C 485.4687 141.3066 484.9923 140.039 484.6768 139.8023 C 484.3613 139.5656 482.6317 139.9539 481.9216 139.8752 C 481.2103 139.7963 481.45 139.0199 481.2133 138.0731 C 481.0063 137.2447 479.6521 136.8582 478.682 136.8283 C 478.6128 136.8263 478.5445 136.8263 478.4789 136.8283 L 478.4789 136.8283 ZM 128.7185 0.0002 C 128.6976 -0.0005 128.6775 0.0004 128.656 0.0054 C 128.0103 0.1484 127.5206 1.8127 127.5206 1.8127 L 126.9685 2.6096 L 125.8643 2.0575 L 124.7602 0.8648 L 123.505 1.5054 L 122.7966 2.6096 L 121.4477 3.5523 L 120.4268 3.1616 L 119.557 3.7137 L 118.2185 5.1252 L 116.88 3.8648 L 115.1352 2.6825 L 113.8695 2.6825 L 113.1716 3.8648 C 113.1716 3.8648 113.2445 5.0484 113.2445 5.4429 C 113.2445 5.8374 114.3487 5.6773 114.3487 5.6773 L 115.4529 6.7085 C 115.4529 6.7085 115.6851 7.8119 115.3696 7.8908 C 115.054 7.9697 114.1925 7.7294 114.1925 7.7294 C 114.3503 8.1238 111.3499 7.342 110.1664 6.4741 C 108.983 5.6063 108.2689 6.3177 106.8487 6.87 C 105.4287 7.4222 105.0395 7.0181 104.1717 6.7814 C 103.3038 6.5448 102.7546 7.4154 101.7289 9.7033 C 100.7033 11.9912 100.6191 10.0164 99.5935 10.4898 C 98.5678 10.9631 98.5742 11.8316 98.4164 13.0939 C 98.2586 14.3563 98.2473 13.4946 96.906 14.5991 C 95.5648 15.7037 95.8117 14.671 95.3383 15.8544 C 94.865 17.0378 94.4697 16.4063 93.2862 16.9585 C 92.1028 17.5108 91.5471 17.7499 92.5727 20.9846 C 93.0855 22.6019 93.3006 22.8018 93.3696 22.7919 C 93.3477 22.8458 93.323 22.9877 93.2862 23.3544 C 93.1284 24.9322 92.8104 24.5429 94.0727 26.0419 C 95.335 27.5408 95.8895 26.03 98.6508 26.1877 C 101.4121 26.3455 100.7776 25.5637 102.1977 27.0627 C 103.6178 28.5617 104.6437 29.904 105.9061 30.6929 C 107.1684 31.4818 106.14 31.3249 107.2446 32.745 C 108.3491 34.1651 109.295 33.0607 110.005 32.1929 C 110.7151 31.3251 111.4248 32.1075 111.1092 33.9221 C 110.7936 35.7366 111.0302 35.7433 111.6613 36.4533 C 112.2925 37.1634 111.9092 36.9244 113.7238 38.8179 C 115.5383 40.7114 115.7657 39.0535 117.3436 40.0002 C 118.9215 40.9469 117.4207 42.1328 115.9217 44.0262 C 114.4226 45.9197 114.5881 45.2865 113.0102 45.8387 C 111.4323 46.391 110.9516 45.6761 110.5571 46.8596 C 110.1626 48.043 110.321 47.4171 108.9009 48.995 C 107.4808 50.5729 107.9618 49.9435 105.9894 50.4169 C 104.017 50.8902 105.8315 51.435 106.5415 52.7762 C 107.2515 54.1174 106.0623 53.3374 106.0623 55.0731 C 106.0623 56.8088 106.778 56.4088 107.0936 58.3023 C 107.4091 60.1957 106.2238 60.033 106.2238 62.0054 C 106.2238 63.9778 106.9335 62.723 107.3279 63.9064 C 107.7224 65.0899 107.5665 67.7676 108.1977 69.1877 C 108.8288 70.6078 108.3557 70.2163 107.6456 71.5575 C 106.9356 72.8987 107.016 73.7668 107.4894 75.2658 C 107.9627 76.7648 107.328 76.9296 106.7759 78.8231 C 106.2236 80.7166 109.5376 82.1273 109.9321 82.4429 C 110.3266 82.7585 112.3706 83.6356 113.8696 83.6356 C 115.3686 83.6356 116.3214 84.4908 118.0571 85.9898 C 119.7928 87.4888 119.0845 86.2342 119.479 87.3387 C 119.8735 88.4433 122.3216 88.2018 123.505 88.3596 C 124.6885 88.5174 125.7151 88.5206 125.005 90.1773 C 124.2969 91.8297 125.076 92.0639 126.7238 93.5523 L 126.7343 93.5627 C 128.3911 95.0617 128.3878 93.4917 129.729 94.3596 C 131.0702 95.2274 131.7005 93.7252 132.4895 95.2242 C 133.2784 96.7232 135.1342 94.2931 136.3176 97.37 C 137.501 100.4469 133.0419 101.4595 131.9374 100.8283 C 130.8329 100.1972 129.6506 101.0682 128.0728 102.646 C 126.4948 104.2239 126.7324 103.8231 125.3124 103.8231 C 123.8923 103.8231 123.974 104.8534 123.4218 105.4846 C 122.8695 106.1157 123.3455 106.3496 122.0832 107.3752 C 120.8209 108.4008 121.7674 108.7965 122.6353 110.4533 C 122.8739 110.9089 122.9621 111.0126 122.9947 111.0054 C 123.011 111.1936 123.0974 111.7065 123.4218 113.0575 C 124.3685 117.0022 123.8955 114.2375 122.3176 116.6044 C 120.7397 118.9712 122.2394 119.0585 122.7915 120.5575 C 123.3438 122.0565 122.3106 120.7068 120.8905 121.4169 C 119.4704 122.1269 119.1615 122.9148 118.6093 124.7294 C 118.057 126.5439 118.6093 125.2107 118.6093 125.5262 C 118.6093 125.8418 118.0585 126.464 116.3228 128.0419 C 114.5872 129.6197 115.4511 128.6783 114.5832 130.1773 C 113.7154 131.6763 111.6636 132.0666 111.427 133.8023 C 111.1903 135.538 112.1391 136.8108 111.7447 138.0731 C 111.3502 139.3354 110.5643 138.0626 109.302 139.6408 C 108.0396 141.2187 105.99 141.1371 104.3332 140.9794 C 102.6764 140.8215 101.486 143.3462 100.7759 145.7919 C 100.0658 148.2376 100.544 148.4825 99.7551 150.2971 C 98.9661 152.1116 99.4306 150.7673 97.4582 153.2919 C 95.4858 155.8165 97.2338 155.1883 96.2082 155.6617 C 95.1826 156.135 95.7315 155.8955 94.9426 157.5523 C 94.1536 159.2091 93.9157 159.1385 91.8644 161.5054 C 89.8132 163.8722 89.6518 162.9919 86.8905 163.3075 C 84.1292 163.6231 85.5537 163.7876 84.8436 165.2867 C 84.1336 166.7856 83.5041 166.6248 82.0051 167.7294 C 80.5061 168.8339 81.3685 169.073 80.4218 171.7554 C 79.475 174.4379 78.2165 174.4424 75.7707 176.0992 C 73.325 177.756 74.4279 178.0703 73.7968 179.9637 C 73.1656 181.8572 72.294 181.5343 69.3749 181.771 C 66.4558 182.0078 66.6987 181.1407 63.9374 181.6929 C 61.176 182.2452 62.039 182.0136 60.6978 182.2502 C 59.3565 182.4869 59.0419 182.4085 57.9374 182.7242 C 56.8328 183.0398 56.5933 184.1333 55.5676 184.37 C 54.542 184.6067 54.6986 183.592 54.6197 182.7242 C 54.5407 181.8563 53.9962 182.0101 53.8384 181.5367 C 53.6805 181.0633 54.0676 180.1184 54.0676 178.1461 C 54.0676 176.1737 51.7836 176.73 48.8644 177.2033 C 45.9454 177.6767 45.7892 178.6991 43.8957 180.1981 C 42.0023 181.6971 39.951 185.953 39.0832 187.0575 C 39.0742 187.0692 39.0659 187.0817 39.0571 187.094 L 258.5363 187.094 C 258.3222 186.9023 258.0995 186.6873 257.8644 186.4325 C 256.9177 185.4069 253.6001 183.6684 251.8644 183.5107 C 250.1287 183.3528 249.6572 183.9065 248.4738 183.9065 C 247.2903 183.9065 247.2083 183.4261 246.6561 182.4794 C 246.1038 181.5326 243.8125 181.3814 243.2602 180.7503 C 242.708 180.1191 242.6325 179.8854 241.8436 178.3075 C 241.0546 176.7296 240.1065 178.0616 239.3175 177.1148 C 238.5286 176.1681 236.4786 174.2014 235.4529 173.3336 C 234.4273 172.4658 233.3951 173.3366 232.9217 172.943 C 232.4483 172.5485 231.2658 172.2294 230.1613 172.2294 C 229.0568 172.2294 226.7805 169.1538 226.3071 168.3648 C 225.8338 167.5759 225.282 167.4146 224.6509 167.6513 C 224.0197 167.888 224.407 169.5456 223.7759 169.7034 C 223.1447 169.8612 222.3565 169.2288 221.5675 168.7555 C 220.7786 168.2821 216.3644 165.2088 216.3644 164.6565 C 216.3644 164.1043 217.6193 164.1812 218.7238 163.7867 C 219.8283 163.3922 219.1188 162.8392 219.1977 161.7346 C 219.2766 160.6301 219.3529 159.9939 220.5363 159.0471 C 221.7197 158.1004 220.5383 156.6086 220.38 155.1096 C 220.2224 153.6107 220.7786 153.7639 221.5675 152.8961 C 222.357 152.0283 222.1962 150.7707 222.354 149.745 C 222.5118 148.7194 222.9894 148.0888 222.9894 148.0888 C 222.9894 148.0888 224.3291 148.0848 225.2759 146.8232 C 226.2226 145.5609 225.4321 144.8492 225.4321 144.8492 C 225.4321 144.8492 226.3797 144.6156 227.4842 144.5367 C 228.5888 144.4578 229.3769 143.1978 229.6925 142.1721 C 230.0081 141.1465 230.0859 140.6677 230.8748 140.5888 C 231.6638 140.5099 233.6434 140.3532 233.88 139.4065 C 234.1167 138.4598 233.6355 137.1194 233.0832 136.6461 C 232.531 136.1727 230.8715 136.8053 229.6092 136.4898 C 228.3469 136.1742 229.2984 134.8347 228.5884 133.6513 C 227.8783 132.4679 224.166 133.6515 223.6925 133.0992 C 223.2192 132.5469 223.1433 132.0695 221.2498 131.9117 C 219.3563 131.7539 220.4574 131.2614 220.5363 129.0523 C 220.6152 126.8433 219.0416 127.6492 218.4894 127.3336 C 217.9371 127.018 217.543 127.1002 217.3852 126.469 C 217.2274 125.8378 216.8283 125.8299 215.7238 125.6721 C 214.6193 125.5143 215.178 125.4439 213.9946 124.8128 C 212.8112 124.1816 212.0999 123.3083 210.9165 123.2294 C 209.7331 123.1505 209.8923 124.1044 208.63 124.1044 C 207.3677 124.1044 206.8893 122.7581 205.9425 121.4169 C 204.9958 120.0757 204.2118 120.7024 204.3696 119.2034 C 204.5275 117.7044 203.4213 116.8494 202.3957 116.2971 C 201.3701 115.7449 201.4477 115.3434 201.4477 114.87 C 201.4477 114.3967 200.8983 114.318 199.5571 114.318 C 198.216 114.318 198.2083 115.502 197.6561 116.9221 C 197.1038 118.3422 196.4061 117.7919 196.4061 117.7919 L 195.6092 114.9482 C 195.6092 114.9482 194.3767 113.6061 195.7967 112.8961 C 197.2168 112.1861 196.4813 111.4752 196.2446 110.844 C 196.0079 110.2128 194.2645 107.5355 194.8957 106.5888 C 195.5268 105.6421 195.2134 105.4873 195.2134 104.1461 C 195.2134 102.8049 195.056 103.4306 194.1092 102.5628 C 193.1625 101.6949 192.6895 101.7001 193.005 100.4378 C 193.3206 99.1754 192.0552 98.9312 191.1873 98.5367 C 190.3195 98.1422 190.8755 97.9835 191.3488 97.0367 C 191.8222 96.09 191.3548 96.1775 191.2759 95.6253 C 191.2282 95.2916 191.0354 94.3786 190.9425 93.5523 C 190.8815 93.011 190.8597 92.5053 190.9528 92.2242 C 191.1895 91.5142 192.8506 91.7532 193.7185 91.9898 C 194.2533 92.1357 194.5118 92.7618 194.6924 93.5523 C 194.8048 94.0445 194.8881 94.6012 194.9789 95.1461 C 195.2156 96.5662 196.3173 96.8081 196.8695 97.2815 C 197.4218 97.7549 197.9809 97.6773 198.8487 97.6773 C 199.7165 97.6773 200.8992 96.252 201.057 95.5419 C 201.2149 94.8319 201.2912 94.3633 201.8435 94.5211 C 202.3957 94.6789 202.9535 94.4328 203.4268 93.8805 C 203.5139 93.7789 203.5911 93.6635 203.6612 93.5523 C 203.9723 93.0597 204.1618 92.5419 204.6768 92.5419 C 205.3079 92.5419 205.3134 93.3284 206.2601 93.3284 C 207.2069 93.3284 207.6811 92.4707 208.3122 91.7607 C 208.9434 91.0506 209.5802 88.9105 209.3435 87.9638 C 209.1068 87.0171 205.5481 83.6225 205.3903 82.8336 C 205.2325 82.0446 206.4982 80.0735 206.656 78.969 C 206.8138 77.8645 206.1004 77.9476 205.3903 77.4742 C 204.6803 77.0008 203.5765 77.315 203.182 77.0784 C 202.7875 76.8417 201.6787 76.4437 200.4164 76.3648 C 199.1541 76.2859 197.9713 76.1366 198.2081 75.5055 C 198.4447 74.8743 198.133 73.6879 197.8174 73.1357 C 197.5019 72.5834 198.0518 71.1617 198.0518 71.1617 C 198.0518 71.1617 199.0374 69.3465 199.9841 68.5575 C 200.9309 67.7686 200.5757 67.5315 200.2601 67.5315 C 199.9445 67.5315 199.6359 66.6665 199.557 65.6409 C 199.4781 64.6152 198.9985 65.0024 198.0518 65.318 C 197.105 65.6335 196.8693 64.4565 197.4216 64.1409 C 197.9739 63.8253 197.656 62.8062 197.656 62.4117 C 197.656 62.0172 199.3217 61.931 199.9528 62.0888 C 200.584 62.2466 202.1607 62.8751 203.8174 63.4273 C 205.4742 63.9796 206.0964 63.7444 206.3331 63.2711 C 206.5697 62.7977 206.3411 61.7007 207.682 60.9117 C 209.0232 60.1228 208.4721 59.8806 208.6299 59.3284 C 208.7878 58.7761 209.2644 55.2236 209.8956 54.7503 C 210.5267 54.2769 212.571 54.2809 213.281 53.8075 C 213.991 53.3342 213.3576 51.5957 213.5153 50.8857 C 213.673 50.1756 214.5426 50.6513 215.4893 50.6513 C 216.4361 50.6513 217.5353 50.1017 218.1664 49.3128 C 218.7976 48.5238 218.1771 45.7543 218.5726 44.8075 C 218.9671 43.8608 219.438 43.7051 219.3591 42.995 C 219.2802 42.285 219.5122 41.3442 219.8278 40.7919 C 220.1434 40.2397 220.8574 39.0504 221.5674 38.1825 C 222.2775 37.3147 222.1151 35.5752 222.0362 33.7607 C 221.9573 31.9461 219.5148 31.3241 219.0414 30.693 C 218.568 30.0618 218.017 29.7489 217.307 29.3544 C 216.597 28.9599 216.122 28.1679 215.3331 27.5367 C 214.5441 26.9056 212.8892 27.3039 211.9424 27.1461 C 210.9957 26.9883 211.2283 26.5845 210.7549 25.9534 C 210.2816 25.3222 209.2574 25.4825 208.4685 25.1669 C 207.6795 24.8514 207.7601 24.5361 207.7601 24.0628 C 207.7601 23.5894 207.2835 23.033 206.4945 22.8753 C 205.7056 22.7175 204.6768 24.3857 204.6768 24.3857 C 204.6768 24.3857 203.3423 24.4644 202.3956 24.9378 C 201.4488 25.4111 201.0549 25.8722 200.7393 26.1878 C 200.4237 26.5033 199.3926 26.6611 199.156 26.1878 C 198.9193 25.7144 198.4511 25.7184 197.031 25.245 C 195.6109 24.7717 195.921 26.117 195.4476 26.4325 C 194.9743 26.7481 195.0521 26.2748 193.9476 26.4325 C 192.8431 26.5903 193.482 27.138 193.1664 26.9013 C 192.8508 26.6646 191.9035 27.0633 190.5622 27.5367 C 189.221 28.0101 189.2217 28.0888 188.3539 28.0888 C 187.4861 28.0888 187.0908 29.7485 186.3018 30.4586 C 185.5129 31.1686 184.2422 32.1953 182.3487 31.9586 C 180.4552 31.7219 180.6197 33.609 180.0674 33.1357 C 179.5152 32.6623 178.8035 32.2678 178.0935 33.1357 C 177.3834 34.0035 176.6773 33.8455 175.0206 33.6878 C 173.3638 33.53 174.5414 32.8264 174.5414 31.9586 C 174.5414 31.0907 173.4435 29.5834 172.2601 28.0055 C 171.0767 26.4276 166.7325 27.9348 164.7601 27.6982 C 162.7882 27.4615 163.4962 25.9516 162.7862 24.5315 C 162.0757 23.1115 162.2328 21.7782 161.8383 20.5159 C 161.4438 19.2536 159.398 19.7311 158.6091 19.0211 C 157.8201 18.311 157.6585 16.9655 156.8695 16.2555 C 156.0806 15.5454 154.1124 15.9356 153.2445 15.62 C 152.3767 15.3045 151.9868 13.7294 150.6456 13.7294 C 149.3046 13.7294 149.2966 12.8621 149.2966 12.0732 C 149.2966 11.2842 148.351 10.7325 148.1143 10.4169 C 147.8776 10.1013 145.9098 9.2325 145.5153 8.9169 C 145.1209 8.6013 145.0327 7.659 144.3226 6.87 C 143.6126 6.0811 142.9067 5.6814 142.8278 4.7346 C 142.7489 3.7879 141.5624 4.3413 141.0101 3.5523 C 140.4581 2.7634 141.2549 2.2034 141.2549 2.2034 C 141.2549 2.2034 139.8356 1.4171 139.0466 0.8648 C 138.2576 0.3126 137.4619 1.8938 137.0674 2.1305 C 136.673 2.3671 135.7289 2.2034 135.7289 2.2034 C 135.7289 2.2034 135.2536 1.7302 134.8591 1.6513 C 134.4646 1.5724 133.4376 3.0018 132.3331 2.844 C 131.2286 2.6862 131.6302 2.2058 131.0779 1.4169 C 130.5256 0.6279 129.4963 0.0843 128.7862 0.0054 C 128.764 0.0029 128.7394 0.0008 128.7185 0.0002 L 128.7185 0.0002 Z" />
 
-  </body>
+                            </a>
+                            <a xlink:href="" title="Middle" accesskey="a">
+                                <g id="center_portion">
+                                    <path d="M 43.3674 186.1959 C 43.3624 186.2029 36.772 188.8927 35.3748 189.9793 C 33.9547 191.0839 30.8028 194.0029 30.1717 194.7918 C 29.5405 195.5808 30.25 201.7325 31.8279 203.547 C 33.4058 205.3616 33.5601 203.7088 35.9269 205.2866 C 38.2937 206.8645 38.4514 206.2345 40.7394 206.2345 C 43.0273 206.2345 41.9201 206.4691 42.0779 208.047 C 42.2358 209.6249 42.0844 210.7272 40.2706 213.0939 C 38.4561 215.4608 39.7126 218.1474 39.7915 218.5418 C 39.8704 218.9363 40.0272 219.5669 40.4217 220.1981 C 40.8162 220.8292 41.3679 220.9878 42.0779 222.2502 C 42.7879 223.5125 43.3434 224.2231 43.8956 224.8543 C 44.4479 225.4855 47.9234 225.324 49.3436 224.6929 C 50.7636 224.0618 51.0827 224.9329 50.0571 225.9585 C 49.0315 226.9841 49.1775 229.3449 49.6509 230.8439 C 50.1242 232.3429 52.9634 236.0586 52.9634 237.0054 C 52.9634 237.9521 53.2822 240.9462 54.229 242.2085 C 55.1757 243.4708 55.572 243.6279 55.6509 244.4168 C 55.7297 245.2058 55.0142 245.3582 54.0675 247.0939 C 53.1208 248.8296 54.6285 248.7498 56.9165 249.8543 C 59.2044 250.9589 56.8408 250.4853 53.9217 250.4064 C 51.0026 250.3275 53.0447 250.6486 52.1769 251.9897 C 51.309 253.3309 51.3933 252.62 49.4998 252.62 C 47.6063 252.62 47.999 252.3036 48.0779 250.5679 C 48.1568 248.8322 47.686 248.5926 47.2915 248.1981 C 46.897 247.8036 47.2129 248.2021 46.1873 248.3595 C 45.1617 248.5174 44.7654 249.3908 44.7654 249.3908 C 44.7654 249.3908 44.6081 249.4659 43.6613 249.7814 C 42.7145 250.097 41.3732 249.858 39.4009 250.0158 C 37.4285 250.1736 38.5299 250.8098 37.5831 252.7033 C 36.6364 254.5967 36.1703 252.7822 33.6456 252.7033 C 31.121 252.6244 31.0422 251.4359 28.8331 250.0158 C 26.6241 248.5957 26.2214 249.4656 24.3279 250.3335 C 22.4344 251.2013 21.8051 251.1263 20.9373 249.9429 C 20.0695 248.7594 19.1979 249.9409 18.6456 250.6512 C 18.0934 251.3613 18.0995 250.3277 18.0206 249.8543 C 17.9418 249.381 16.4359 249.6981 16.0415 249.6981 C 15.647 249.6981 15.4128 249.6277 15.255 248.8387 C 15.0972 248.0498 13.6778 248.5135 13.0467 248.7502 C 12.4155 248.9869 12.6568 253.1718 12.5779 254.2762 C 12.4991 255.3808 12.1817 255.457 11.1561 255.6148 C 10.1304 255.7726 8.3111 255.2213 7.3644 254.9846 C 6.4176 254.7479 4.2945 253.9593 3.979 253.8804 C 3.6634 253.8015 1.9209 256.3302 1.9998 257.7502 C 2.0787 259.1703 2.3941 258.5327 2.5519 259.4794 C 2.7097 260.4261 1.4523 260.191 0.979 261.4533 C 0.5056 262.7156 1.7666 262.8743 2.7134 263.5054 C 3.6601 264.1366 4.4541 262.5673 5.4009 262.094 C 6.3476 261.6206 6.8926 261.2183 7.2081 260.745 C 7.5238 260.2715 9.2643 259.0889 10.4477 258.5367 C 11.6312 257.9844 11.3127 258.5337 12.3384 258.9273 C 13.3639 259.3217 11.6271 259.9547 11.3904 260.3492 C 11.1537 260.7436 9.4965 261.2956 8.2342 261.4533 C 6.9719 261.6112 6.8146 261.7746 6.5779 262.4846 C 6.3413 263.1946 6.2642 263.5863 5.3175 264.3752 C 4.3708 265.1642 5.795 265.7194 6.505 266.745 C 7.2151 267.7706 9.2633 269.1868 8.9477 269.8179 C 8.6322 270.4491 13.4468 275.0313 14.0779 275.5835 C 14.7091 276.1358 21.256 279.2104 22.755 280.0783 C 23.3171 280.4037 23.9546 280.5684 24.6456 280.6617 C 25.7974 280.8173 27.0955 280.7661 28.4269 280.8648 C 29.1904 280.9213 29.5885 280.8357 29.7967 280.6617 C 30.1692 280.3505 29.9314 279.7282 30.0831 278.969 C 30.3199 277.7855 31.1943 278.6534 32.6144 278.969 C 34.0345 279.2845 35.1378 279.4415 36.479 279.0471 C 37.8202 278.6526 36.0076 278.0243 37.3488 277.1564 C 38.6899 276.2886 38.8463 276.6875 39.6352 277.2397 C 40.4242 277.792 41.1397 277.3104 41.2186 276.995 C 41.2974 276.6794 42.7155 276.4444 43.0311 276.2866 C 43.3466 276.1288 42.2438 275.1105 42.3227 274.4793 C 42.4016 273.8481 44.3696 274.6356 44.3696 274.6356 C 44.3696 274.6356 45.5519 275.4197 45.5519 275.6564 C 45.5519 275.8931 44.9269 276.7603 44.9269 277.3127 C 44.9269 277.8649 43.5828 278.416 42.5571 278.495 C 41.5315 278.5739 41.6093 279.919 41.0571 280.2345 C 40.9017 280.3232 40.6977 280.4814 40.4738 280.6616 C 39.9013 281.1223 39.2394 281.7345 39.2394 281.7345 C 39.2394 281.7345 38.6111 282.9925 37.3488 283.7814 C 36.0865 284.5703 35.5272 283.9428 33.7915 283.9428 C 32.0558 283.9428 32.6144 284.8856 32.6144 284.8856 C 32.6144 284.8856 31.1161 285.9876 30.4061 285.672 C 29.696 285.3564 28.8252 285.8296 28.0363 286.2241 C 27.2473 286.6186 27.41 287.3335 27.0154 287.3335 C 26.621 287.3335 25.9101 286.6246 24.9634 286.1512 C 24.0166 285.6778 24.017 286.4688 23.8592 287.021 C 23.7013 287.5732 22.8318 287.172 22.4373 287.172 C 22.0429 287.172 21.4874 287.7299 20.6196 288.2033 C 19.7517 288.6766 19.6003 287.4147 19.4425 287.0991 C 19.2847 286.7835 19.0402 285.3649 18.6456 284.8127 C 18.2512 284.2604 16.4373 284.495 16.4373 284.495 C 16.4373 284.495 16.3589 284.4919 15.3331 284.7293 C 14.3075 284.966 13.9136 286.0742 13.6769 287.021 C 13.4402 287.9677 13.9944 289.3856 14.5467 291.5158 C 15.0989 293.6459 15.812 293.0964 16.9165 294.4377 C 18.021 295.7788 22.6752 300.4307 23.3852 301.1408 C 24.0952 301.8508 26.3015 304.6896 27.4061 305.5575 C 28.5106 306.4253 28.1171 306.5012 28.9061 308.0002 C 29.695 309.4992 30.9556 311.4009 31.7446 312.5053 C 32.5335 313.6099 33.2388 314.24 34.8956 315.8178 C 36.5524 317.3958 36.4807 317.3117 37.9009 317.9428 C 39.3209 318.574 39.4794 320.5513 40.505 321.1825 C 41.5306 321.8136 43.2645 321.4166 43.8956 321.9689 C 44.5268 322.5212 46.718 324.2563 48.3748 323.6252 C 50.0316 322.994 49.5741 321.7345 49.9686 321.7345 C 50.363 321.7345 51.7107 322.7577 53.0519 322.521 C 54.3931 322.2842 56.837 321.4207 58.5727 321.0262 C 60.3084 320.6317 60.5419 319.4511 61.5675 319.1356 C 62.5932 318.82 62.9858 318.6543 64.9581 318.3387 C 66.9305 318.0232 66.5398 317.2355 67.2498 316.6043 C 67.9599 315.9733 69.1416 316.1371 70.0884 315.9793 C 71.0351 315.8214 72.1389 314.6309 72.2967 312.9741 C 72.4545 311.3173 73.5597 310.7609 74.9009 309.6564 C 76.2421 308.5519 76.0037 307.1448 75.6092 306.1981 C 75.2147 305.2513 74.4321 305.0904 74.4321 304.3803 C 74.4321 303.6703 75.7743 303.1089 75.9321 302.6356 C 76.09 302.1621 75.9259 301.3782 75.6092 301.0627 C 75.2936 300.747 74.9016 299.8835 74.8227 299.5678 C 74.7438 299.2523 75.2913 296.8076 75.8436 296.2553 C 76.3958 295.7031 76.8748 295.0665 76.8748 294.672 C 76.8748 294.2776 76.3204 290.1737 76.5571 289.4637 C 76.7938 288.7537 77.5868 290.5688 77.7446 292.0678 C 77.9025 293.5668 78.219 293.2569 79.2446 293.0991 C 80.2702 292.9413 81.2965 293.3318 81.8488 294.0418 C 82.401 294.7518 81.1334 295.2285 79.7134 295.3075 C 78.2932 295.3864 78.6881 296.795 78.6092 298.6095 C 78.5303 300.4241 79.4057 299.3231 80.5102 299.3231 C 81.6148 299.3231 81.9992 299.8829 81.5259 301.2241 C 81.0525 302.5653 79.3213 302.3236 78.9269 302.797 C 78.5324 303.2704 79.3939 304.3742 80.104 305.0053 C 80.814 305.6365 83.7317 304.6123 84.5206 304.8491 C 85.3096 305.0858 84.994 305.7961 84.5206 306.4272 C 84.0472 307.0583 82.0878 307.1361 81.6144 307.6095 C 81.141 308.0828 81.6933 309.0333 81.6144 309.9012 C 81.5355 310.769 80.8989 310.5335 80.0311 310.8491 C 79.1632 311.1647 79.2446 312.1898 79.2446 312.5053 C 79.2446 312.8209 79.4809 314.1552 80.3488 315.3387 C 81.2166 316.5221 81.7625 316.2841 81.5259 317.0731 C 81.2891 317.862 81.766 318.3428 82.2394 319.5262 C 82.7128 320.7096 83.1048 321.0221 83.0259 321.9689 C 82.947 322.9156 83.4244 323.7897 84.2134 325.6043 C 85.0023 327.4189 83.8898 327.5712 83.4165 328.8335 C 82.9431 330.0958 82.3125 330.0953 81.7602 330.4897 C 81.2079 330.8842 81.5297 333.6479 81.1352 334.5158 C 80.7407 335.3836 80.2662 336.0929 80.1873 336.7241 C 80.1084 337.3553 80.4221 338.5378 79.3175 339.4845 C 78.213 340.4313 79.0853 340.9828 79.4009 341.6928 C 79.7165 342.403 79.7155 342.6389 80.0311 343.9012 C 80.3466 345.1635 80.8158 344.1333 81.5259 344.37 C 82.2359 344.6066 81.2164 345.3989 80.9009 345.6356 C 80.5853 345.8723 80.1121 346.901 80.3488 347.4533 C 80.5855 348.0055 80.9735 347.613 82.0779 348.3231 C 83.1825 349.0331 82.0014 349.4234 81.2915 349.8178 C 80.5815 350.2124 81.2915 352.0313 81.2915 352.5835 C 81.2915 353.1358 80.9832 356.0534 81.6144 357.0002 C 82.2455 357.9469 82.3933 355.8902 82.63 355.4168 C 82.8667 354.9435 83.5779 353.7606 83.5779 353.7606 C 83.5779 353.7606 85.2377 353.3682 85.9477 354.0783 C 86.6578 354.7883 85.3179 355.0244 84.2134 355.7345 C 83.1088 356.4445 83.5741 356.2126 83.9686 357.396 C 84.3631 358.5793 84.2113 358.1845 83.8956 358.5002 C 83.5801 358.8157 82.6399 358.5768 82.1665 358.7345 C 81.6932 358.8924 81.4566 360.2326 81.6144 361.495 C 81.7722 362.7572 82.947 362.9144 83.0259 363.7033 C 83.1047 364.4922 81.6813 365.2841 81.7602 366.0731 C 81.8391 366.862 82.7971 367.7269 83.8227 368.5158 C 84.8483 369.3047 84.5399 369.44 84.3032 371.0968 C 84.0665 372.7535 85.0592 372.5901 85.0592 372.5901 C 85.0592 372.5901 85.6469 372.7804 86.0413 373.4114 C 86.2075 373.6773 86.303 374.2821 86.3324 374.5063 C 86.5316 374.6396 86.5104 375.3147 86.512 375.3225 L 278.3879 375.5021 C 278.4686 375.9963 282.4981 373.2004 283.5295 372.9635 C 284.7305 372.6877 286.2583 371.1165 287.5207 370.4064 C 288.783 369.6964 292.3388 368.4417 293.3644 367.495 C 294.39 366.5482 295.0894 365.5953 296.5884 363.3075 C 298.0874 361.0194 299.9102 359.4411 301.0936 358.021 C 302.277 356.6009 303.5363 355.5023 303.5363 353.6877 C 303.5363 351.8731 304.1729 352.3493 305.1196 351.797 C 306.0663 351.2448 306.2191 350.9967 306.6925 350.2866 C 307.1659 349.5766 307.17 349.0271 307.88 348.396 C 308.5901 347.7648 311.6613 346.1877 311.6613 346.1877 L 312.0571 345.4012 C 312.4516 344.6118 312.2979 344.7725 313.2446 344.6147 C 314.1913 344.4569 314.2693 343.5049 313.8748 342.4793 C 313.4804 341.4537 313.6325 342.4028 312.8436 342.245 C 312.0547 342.0871 311.7463 342.2469 311.0363 341.8543 C 310.3263 341.4598 310.5571 341.6082 310.5571 341.2137 C 310.5571 340.8192 312.7668 339.7191 313.1613 339.1668 C 313.5557 338.6146 314.3536 338.4556 315.4582 338.2189 C 316.5627 337.9822 315.77 338.8498 315.2967 339.3231 C 314.8234 339.7965 315.1344 340.6675 315.2134 341.1408 C 315.2923 341.6142 315.6864 341.7672 316.3176 342.1616 C 316.9487 342.5561 317.5049 342.0099 318.0571 341.5366 C 318.6094 341.0634 318.2927 341.0575 319.2394 341.0575 C 320.1862 341.0575 320.9765 340.5123 321.7655 339.8022 C 322.5544 339.0922 325.8644 338.3001 325.8644 337.9845 C 325.8644 337.6689 328.3872 336.9608 329.2551 336.7241 C 330.1228 336.4874 330.8359 335.9363 331.6248 335.5418 C 332.4138 335.1474 338.9655 328.1975 339.2811 327.7241 C 339.5966 327.2508 339.3518 326.3835 339.0363 326.0678 C 338.7207 325.7523 338.4112 324.5717 338.9634 324.1772 C 339.5157 323.7828 341.8026 321.4232 342.2759 320.2397 C 342.7493 319.0563 341.9583 319.2027 341.4061 318.7293 C 340.8538 318.256 341.5696 318.1855 341.8853 317.87 C 342.2008 317.5544 342.4277 317.0755 342.3488 316.2866 C 342.2699 315.4977 341.0081 314.7115 340.6926 314.396 C 340.377 314.0804 339.1196 311.8664 339.1196 311.1564 C 339.1196 310.4464 340.1484 310.0525 340.9373 309.5002 C 341.7262 308.9479 342.9879 307.3694 343.1457 306.896 C 343.3033 306.4226 343.6991 306.1095 344.0936 306.1095 C 344.488 306.1095 347.327 305.7118 347.9582 304.8439 C 348.5894 303.976 350.1662 303.9801 351.2707 303.9012 C 352.3752 303.8223 354.1088 303.7398 355.2134 303.1877 C 356.3178 302.6354 355.0519 302.2414 355.0519 301.5314 C 355.0519 300.8213 355.2956 300.506 356.479 300.4272 C 357.6624 300.3483 357.6574 299.8815 358.0519 298.6981 C 358.4464 297.5146 357.973 297.7482 358.0519 296.8803 C 358.1308 296.0126 359.158 295.695 360.0259 296.0106 C 360.8936 296.3261 360.8957 297.9074 360.8957 299.4064 C 360.8957 300.9054 361.6797 299.7926 362.4686 299.7137 C 363.2575 299.6348 363.9667 299.643 365.229 299.4064 C 366.4913 299.1697 366.8158 298.5427 367.5259 297.9116 C 368.2359 297.2804 368.0734 296.8828 368.5467 296.0939 C 369.0201 295.3049 369.8046 296.8013 370.5936 297.4325 C 371.3825 298.0636 373.4341 297.6654 374.3019 297.271 C 375.1697 296.8766 374.5467 296.1709 374.5467 295.2241 C 374.5467 294.2774 374.7773 293.8836 375.1717 293.0158 C 375.5662 292.1479 375.0141 291.0368 374.6196 290.4845 C 374.2252 289.9322 373.6003 289.3807 373.4426 288.2762 C 373.2847 287.1717 373.0482 287.2594 372.8905 286.3127 C 372.7327 285.3659 373.1175 285.7574 372.802 283.9428 C 372.4864 282.1283 372.1018 282.2845 371.7863 281.9689 C 371.5628 281.7454 371.2654 281.4687 371.2186 280.6616 C 371.1982 280.3293 371.2137 279.917 371.3071 279.3647 C 371.6227 277.4713 372.017 277.6307 371.8593 276.5262 C 371.7014 275.4217 370.7574 275.3471 370.5207 274.4793 C 370.284 273.6115 371.3903 273.2904 371.9426 272.896 C 372.4948 272.5015 372.6543 270.0568 371.2343 269.5835 C 369.8141 269.1101 368.23 269.5795 367.5988 268.87 C 366.9677 268.1599 368.0734 267.926 368.5468 266.9793 C 369.0201 266.0326 368.4628 264.7758 367.9894 263.7502 C 367.5161 262.7245 365.2375 262.3286 364.3696 261.2241 C 363.5018 260.1196 364.0555 258.6164 364.7655 257.9064 C 365.4755 257.1963 366.2637 256.7237 366.9738 255.6981 C 367.6838 254.6725 367.3682 254.1963 366.9738 252.7762 C 366.5793 251.3561 366.9708 250.4955 366.6561 248.8387 C 366.3405 247.1819 364.5197 247.9652 363.0207 247.8074 C 361.5217 247.6498 360.815 247.4944 359.4738 247.021 C 358.1326 246.5476 357.3407 245.1282 357.104 244.8127 C 356.8674 244.4971 355.6077 241.4975 355.7655 240.7085 C 355.9231 239.9196 356.3197 239.8366 356.6353 239.521 C 356.9508 239.2054 357.8216 239.4459 359.0051 239.1304 C 360.1884 238.8148 360.3377 237.4 360.4165 236.4533 C 360.4954 235.5065 360.8167 233.3721 361.4478 233.6877 C 362.0789 234.0032 362.0736 233.6917 364.1248 232.7449 C 366.1761 231.7982 367.2086 232.6579 368.2343 232.5002 C 369.2599 232.3423 369.5013 231.1581 369.8957 230.4481 C 370.2902 229.738 369.8829 229.1121 369.4894 227.771 C 369.0949 226.4298 368.076 227.2123 367.2082 226.8179 C 366.3403 226.4234 366.6584 226.119 366.4218 224.6199 C 366.1851 223.121 365.8627 223.9064 364.4426 223.9064 C 363.0225 223.9064 363.9733 224.2926 362.9478 224.2137 C 361.9221 224.1348 361.5997 224.1431 360.9686 223.9064 C 360.3375 223.6697 360.6628 222.9543 360.5051 222.3231 C 360.3472 221.6921 359.9435 221.9348 359.3123 221.6981 C 358.6813 221.4613 358.0552 220.4341 357.1873 219.7241 C 356.3196 219.0141 355.0521 218.8576 354.4998 217.9897 C 353.9476 217.1219 354.4998 216.6491 355.0519 216.3335 C 355.6042 216.0179 355.3748 215.3084 355.3748 214.6772 C 355.3748 214.0461 356.0079 213.4118 356.2446 212.8595 C 356.4813 212.3072 357.6578 211.5956 359.078 210.8856 C 360.498 210.1756 360.4165 208.9064 360.4165 208.9064 L 359.4738 208.2085 C 359.1582 207.9718 359.3123 207.0158 359.3123 207.0158 C 359.3123 207.0158 360.2586 207.256 360.9686 207.7293 C 361.6786 208.2027 361.4419 209.0733 361.5207 210.6512 C 361.5995 212.2291 362.159 212.3072 362.3957 212.8595 C 362.6323 213.4118 363.7339 214.2025 364.8384 214.2814 C 365.9429 214.3603 366.3391 213.6522 366.2603 213.021 C 366.1813 212.3899 365.0795 211.8321 364.9217 211.4377 C 364.7641 211.0432 365.0793 210.6452 366.0259 210.7241 C 366.9727 210.803 367.1291 211.4377 367.7603 211.4377 C 368.3912 211.4377 368.3853 210.5679 368.3853 210.5679 C 368.3853 210.5679 367.7603 209.3835 367.7603 209.0679 C 367.7603 208.7523 369.3436 209.8647 369.3436 209.8647 C 369.3436 209.8647 369.6507 210.9604 370.2029 211.8283 C 370.7552 212.6961 372.2498 213.1689 372.2498 213.4845 C 372.2498 213.8001 374.3134 215.7731 375.8123 216.0887 C 377.3114 216.4043 378.4148 215.7027 379.1248 215.2293 C 379.8349 214.756 379.4318 214.123 380.5363 213.8075 C 381.6407 213.4919 382.2736 214.9842 382.5103 216.0887 C 382.7469 217.1933 381.9597 217.5949 381.8019 219.0939 C 381.6441 220.5929 382.1901 220.1121 382.979 221.4533 C 383.768 222.7945 383.3773 223.506 382.5884 223.9793 C 381.7994 224.4527 381.8748 225.8791 381.8748 227.6147 C 381.8748 229.3499 384.5659 229.6595 385.2759 229.3439 C 385.9859 229.0283 386.4561 229.738 388.2707 230.4481 C 390.0852 231.1581 389.2993 229.744 390.6404 230.3752 C 391.9817 231.0063 391.8188 231.0768 394.8957 231.2346 C 397.9726 231.3924 396.7129 229.821 398.3696 229.5054 C 400.0264 229.1898 399.9501 229.6651 401.8436 230.3752 C 403.7371 231.0852 404.9995 229.5041 406.104 229.1096 C 407.2085 228.7152 406.4189 229.1899 408.3123 229.5054 C 410.2058 229.821 410.44 230.3789 413.9113 230.5367 C 417.3827 230.6945 416.1195 230.2178 416.6717 229.271 C 417.224 228.3243 418.0103 229.0262 418.0103 229.0262 C 418.0103 229.0262 418.0883 229.037 420.2186 228.8804 C 422.3487 228.7226 421.0084 228.7225 422.2707 229.4325 C 423.533 230.1423 424.0103 230.1304 424.0103 230.1304 L 424.7238 230.1304 C 425.4338 230.1304 425.7487 230.2915 426.9321 231.396 C 428.1155 232.5005 426.4533 231.4793 425.3488 231.4793 C 424.2442 231.4793 423.1404 232.8179 423.1404 232.8179 C 423.1404 232.8179 423.6126 234.3138 424.8748 235.2606 C 426.1372 236.2073 424.8004 236.0469 424.4061 236.5991 C 424.0117 237.1514 422.7438 236.9931 422.8228 238.2554 C 422.902 239.5177 422.906 241.422 422.906 241.422 C 422.906 241.422 422.1118 241.2561 420.7706 241.1772 C 419.4294 241.0983 419.3605 241.6536 419.755 243.547 C 420.1494 245.4405 419.8279 246.0731 419.8279 246.0731 C 419.8279 246.0731 418.6437 245.2048 417.7758 245.047 C 416.908 244.8894 416.4373 245.5991 416.4373 245.5991 C 416.4373 245.5991 415.5655 245.8362 414.6977 246.6252 C 413.8299 247.4141 414.5366 247.9629 413.4321 248.0418 C 412.3276 248.1207 411.5502 248.0488 410.13 248.9949 C 408.71 249.9417 408.6196 251.1199 408.6196 251.1199 C 408.6196 251.1199 408.7047 253.4873 407.9946 254.2762 C 407.2845 255.0652 407.6829 255.1472 407.604 256.0939 C 407.5251 257.0407 406.9633 257.9136 406.9633 258.7814 C 406.9633 259.6493 407.9094 261.0598 409.1717 262.9533 C 410.4339 264.8467 410.5206 268.1599 410.5206 268.87 C 410.5206 269.58 411.3071 270.8439 411.3071 270.8439 C 411.3071 270.8439 412.7222 270.2957 412.88 269.9012 C 413.0379 269.5068 412.4894 268.5605 412.4894 268.245 C 412.4894 267.9294 413.3613 267.0521 413.6769 267.6043 C 413.9924 268.1566 414.7826 268.9564 414.6248 270.771 C 414.467 272.5855 415.0942 272.1116 415.5675 272.4272 C 416.0409 272.7428 416.8314 273.0538 417.5415 272.896 C 418.2515 272.7381 419.5889 271.4021 420.0623 270.771 C 420.5356 270.1398 420.4633 268.0026 420.4633 267.2137 C 420.4633 266.4248 419.6665 264.4533 419.6665 264.4533 C 419.6665 264.4533 420.8531 262.6462 421.4842 262.0939 C 422.1152 261.5416 422.2669 260.2683 422.1092 259.4793 C 421.9515 258.6904 421.8822 257.7503 422.1977 257.1981 C 422.5133 256.6458 422.7473 257.5144 423.5362 257.12 C 424.3251 256.7255 424.2442 256.3327 425.3487 256.4117 C 426.4532 256.4905 426.3012 256.7268 425.8279 257.5158 C 425.3545 258.3047 426.4587 258.3771 426.932 259.245 C 427.4054 260.1128 428.2648 260.2697 427.7914 262.0054 C 427.3181 263.7411 428.5851 265.2438 429.4529 266.4272 C 430.3207 267.6107 430.1672 266.8941 430.0883 268.1564 C 430.0094 269.4188 430.5654 270.5274 429.6977 271.4742 C 428.8298 272.4209 429.6146 273.4163 430.6404 275.0731 C 431.666 276.7299 431.5822 275.9774 432.2133 277.2397 C 432.8444 278.502 432.2966 279.6011 432.2966 280.4689 C 432.2966 280.5282 432.3066 280.591 432.3174 280.6617 C 432.483 281.621 433.6709 283.5396 433.083 284.495 C 432.4519 285.5205 434.5051 290.1746 433.9528 291.5158 C 433.4005 292.857 434.1861 293.6429 435.3695 293.9585 C 436.5529 294.2741 436.551 293.249 436.6299 292.3022 C 436.7088 291.3555 436.5542 291.194 437.8955 292.1408 C 439.2367 293.0875 439.5536 293.4875 440.9736 293.7242 C 442.3938 293.9608 441.6826 292.2237 442.1559 291.1981 C 442.6293 290.1725 442.4735 289.9349 443.0257 289.146 C 443.578 288.3571 444.2042 287.8094 444.5986 286.547 C 444.9931 285.2847 443.4944 283.7841 444.0466 282.4429 C 444.4219 281.5314 444.3587 281.0954 444.2809 280.6617 C 444.2442 280.4571 444.2029 280.253 444.2029 280.0002 C 444.2029 279.2112 443.0295 278.1032 443.1872 277.1564 C 443.3451 276.2097 443.1034 274.7928 442.6299 274.1617 C 442.1566 273.5305 442.075 272.3427 441.8383 271.396 C 441.6016 270.4493 442.7056 269.19 443.4945 268.9533 C 444.2834 268.7166 445.3953 268.7993 446.4997 268.5627 C 447.6042 268.326 446.6573 265.9544 447.0518 264.771 C 447.4463 263.5876 445.5451 260.984 445.7029 260.5106 C 445.8607 260.0373 446.5741 259.0109 446.9685 257.9064 C 447.363 256.8019 446.7304 256.7214 446.5726 255.9325 C 446.4148 255.1435 446.4877 250.097 446.6455 249.7814 C 446.8032 249.4658 447.8358 248.9892 448.6247 248.5158 C 449.4137 248.0424 449.8864 248.6807 450.833 249.3908 C 451.7798 250.1008 452.1795 250.0159 452.9684 249.4637 C 453.7574 248.9114 453.6721 248.9948 454.6976 249.547 C 455.7233 250.0993 457.1458 250.884 458.7237 248.9116 C 460.3015 246.9393 458.5674 247.8845 458.5674 246.3855 C 458.5674 244.8866 458.9623 245.3591 459.5934 244.3335 C 460.2246 243.3078 460.1424 241.7314 460.458 239.9168 C 460.7735 238.1022 462.0412 238.1016 462.5934 237.3126 C 463.1457 236.5237 462.743 235.7423 462.9008 234.4012 C 463.0586 233.0599 463.9243 233.2104 464.7133 231.948 C 465.5022 230.6857 465.4268 227.0533 465.4268 225.8699 C 465.4268 224.6864 465.1139 225.318 464.0883 224.7658 C 463.0627 224.2135 463.2163 223.1947 462.9008 221.9324 C 462.5852 220.6701 464.7133 219.3283 464.7133 219.3283 C 464.7133 219.3283 465.742 218.6209 466.5309 217.9897 C 467.3199 217.3586 467.8776 216.4795 468.1143 215.9272 C 468.351 215.375 468.6602 214.1945 469.2914 213.4845 C 469.9225 212.7744 469.2974 210.0167 469.4529 209.3855 C 469.6107 208.7544 470.638 207.0198 470.8747 206.073 C 471.1114 205.1263 470.3934 204.7289 470.0779 203.7032 C 469.7623 202.6777 470.2454 202.6077 470.1664 201.1876 C 470.0874 199.7675 468.9045 198.656 468.5101 197.6303 C 468.1157 196.6048 469.9988 195.024 470.6299 194.7085 C 471.261 194.3929 473.0016 194.155 473.8694 193.7605 C 474.7373 193.3661 474.269 192.8225 474.4268 192.3491 C 474.5846 191.8757 475.925 190.8487 476.6351 189.823 C 477.1311 189.1065 477.822 187.327 478.9337 186.5813 C 478.9446 186.5743 479.3478 186.0851 479.3586 186.0779 L 418.5399 186.0699 C 418.5379 186.0749 417.9507 187.6684 417.8604 187.867 C 417.0714 189.6027 417.304 189.6583 417.6195 192.104 C 417.9351 194.5498 418.645 194.3911 418.1716 194.8645 C 417.6982 195.3379 417.4582 194.474 416.906 193.9217 C 416.3537 193.3695 414.6214 193.3697 413.3591 193.3697 C 412.0968 193.3697 411.3861 195.2603 410.7549 195.2603 C 410.1237 195.2603 408.7776 195.0259 407.5154 195.0259 C 406.253 195.0259 406.9634 196.1361 406.4112 196.0572 C 405.8589 195.9787 404.3677 195.8898 402.9476 195.9687 C 401.5276 196.0476 401.2881 197.313 400.0258 197.7864 C 398.7635 198.2598 393.951 197.6291 392.531 196.1301 C 391.1108 194.6311 389.9268 195.026 389.9268 195.026 C 389.9268 195.026 390.42 195.9767 388.4476 196.2135 C 386.4753 196.4501 386.7684 196.9222 386.4529 197.9478 C 386.1372 198.9734 385.5858 198.6579 384.2445 197.9478 C 382.9034 197.2378 382.7445 197.9478 382.7445 197.9478 C 382.7445 197.9478 382.5849 199.6851 381.3226 199.9218 C 380.0604 200.1585 378.7283 199.5253 378.2549 199.052 C 377.7816 198.5786 377.4613 198.1785 376.5935 198.0207 C 375.7256 197.8629 375.6473 197.704 374.9372 197.0728 C 374.2272 196.4417 373.0386 197.1573 372.2497 198.1041 C 371.4608 199.0508 370.1992 198.187 369.4893 197.1614 C 368.7792 196.1357 365.7036 195.1034 365.6247 194.6301 C 365.5458 194.1567 365.395 193.4473 364.9216 192.9739 C 364.4482 192.5005 363.7318 191.9524 363.9685 191.4791 C 364.2051 191.0057 365.3174 189.7404 365.3174 189.1093 C 365.3174 188.4781 365.002 187.7731 364.7654 187.5364 C 364.7009 187.4722 362.9536 186.1916 362.9503 186.1867 L 351.615 185.938 C 351.615 185.943 350.5151 189.0666 350.4736 189.8957 C 350.3949 191.4737 350.4796 192.6604 349.8486 193.2916 C 349.2174 193.9227 349.9228 195.0258 350.3174 195.578 C 350.7118 196.1303 353.0049 200.3911 353.0049 200.8645 C 353.0049 201.3379 353.0019 204.3335 352.6872 205.9114 C 352.3717 207.4892 352.1337 207.8805 351.7392 208.9062 C 351.3448 209.9318 350.9544 208.6698 350.2444 207.802 C 349.5344 206.9341 348.5025 207.4193 346.609 208.2082 C 344.7156 208.9972 345.4263 209.1428 344.4007 208.9062 C 343.3751 208.6694 343.3041 208.2056 340.3851 208.9947 C 337.4659 209.7836 337.5459 208.4412 337.0726 208.0467 C 336.5992 207.6523 335.8804 206.4613 334.2236 206.1457 C 332.5668 205.8301 331.0674 208.5988 331.0674 208.5988 C 331.0674 208.5988 330.3601 207.9597 329.1767 207.802 C 327.9933 207.6441 328.2323 208.1986 326.8122 208.1197 C 325.3921 208.0408 325.5548 207.4159 325.2392 206.9426 C 324.9237 206.4692 323.0251 205.203 322.5517 205.203 C 322.0783 205.203 321.3667 206.4657 320.5778 206.229 C 319.7888 205.9923 319.7054 205.2032 318.3642 204.6509 C 317.023 204.0987 317.4264 205.2838 316.4007 206.0728 C 315.3751 206.8618 315.0554 206.7099 315.2132 205.9999 C 315.371 205.2898 314.9775 204.8051 314.583 204.4895 C 314.1885 204.1739 313.5517 203.861 313.5517 203.1509 C 313.5517 202.4409 312.8424 201.7358 311.3434 201.578 C 309.8444 201.4202 310.0087 202.2916 309.6142 202.2916 C 309.2198 202.2916 307.4855 202.7624 307.3278 203.078 C 307.1699 203.3936 305.6657 202.6743 305.1924 201.8853 C 304.719 201.0964 299.3543 199.3676 297.6976 199.052 C 296.0408 198.7364 296.5934 198.5757 296.5934 196.6822 C 296.5934 194.7887 294.8652 192.2641 294.234 191.8697 C 293.6029 191.4752 291.0722 192.2665 290.0465 191.6353 C 289.0209 191.0042 289.6538 190.7701 289.3382 190.2968 C 289.0226 189.8234 288.0025 189.4293 286.109 189.1926 C 284.2155 188.9559 285.7863 189.7447 285.234 189.7447 C 284.6818 189.7447 283.7301 189.6671 281.9944 190.1405 C 280.2588 190.6139 281.208 191.7134 281.208 191.7134 C 281.208 191.7134 280.023 191.5523 279.234 190.9999 C 278.4451 190.4476 275.6084 190.7713 275.1351 191.2447 C 274.6617 191.718 274.5809 193.0585 274.2653 193.453 C 273.9497 193.8475 273.4009 193.1378 272.8486 192.3488 C 272.2964 191.5599 266.6644 191.5567 265.7965 191.0832 C 264.9287 190.6099 265.1135 190.5317 265.1924 188.8749 C 265.2713 187.2181 264.0966 187.5298 263.2288 187.1353 C 263.2104 187.1273 263.1946 187.1163 263.1767 187.1093 C 263.1612 187.1033 263.1452 187.0989 263.1298 187.0937 L 262.4423 187.0937 C 262.4211 187.0997 262.4011 187.1027 262.3798 187.1093 C 261.8115 187.2851 261.225 187.7385 260.5413 187.8437 C 259.8552 187.9493 258.5336 188.5657 256.022 186.8832 C 255.7346 186.6908 255.4317 186.4682 255.1124 186.2113 C 255.1074 186.2063 43.3672 186.1957 43.3672 186.1957 L 43.3674 186.1959 Z" />
+
+                                    <g id="chakra" transform="scale(0.15) translate(800,1400)">
+                                        <path d="M 171.6744 172.0946 C 179.1654 164.6015 186.956 157.4107 195.03 150.54 C 201.7033 158.8162 213.8011 160.2968 222.2819 153.7885 C 230.7704 147.2739 232.4668 135.1904 226.18 126.6 C 243.5448 114.5809 261.9247 103.9237 281.165 94.785 C 285.443 104.5608 296.7782 109.1567 306.6803 105.0543 C 316.5877 100.9504 321.3517 89.6763 317.455 79.735 C 337.2299 72.6784 357.7366 67.1631 378.83 63.33 C 380.4435 73.8671 390.1962 81.2259 400.8152 79.8278 C 411.4179 78.4318 418.9252 68.8269 417.785 58.25 C 428.26 57.4119 438.8523 56.9827 449.5426 56.9827 L 436.0698 292.793 L 445.515 371.5 C 441.2875 371.7137 437.1463 372.2597 433.12 373.115 L 421.8739 294.6621 L 347.8359 70.3746 L 395.8462 301.6372 L 425.325 375.195 C 421.3259 376.4887 417.4696 378.0956 413.78 379.985 L 382.6179 307.1172 L 253.0601 109.6373 L 359.2817 320.5923 L 406.805 384.025 C 403.2989 386.3022 399.9855 388.8537 396.895 391.645 L 347.9224 329.3094 L 171.6744 172.0946 ZM 56.5774 450.0001 C 56.5774 439.3082 57.0023 428.7163 57.84 418.24 C 68.4154 419.3802 78.0238 411.8695 79.4196 401.2659 C 80.8175 390.6451 73.4568 380.8883 62.92 379.275 C 66.7527 358.1805 72.2695 337.6714 79.325 317.895 C 89.2658 321.7928 100.5388 317.0278 104.6428 307.1187 C 108.7449 297.2141 104.1508 285.8783 94.375 281.6 C 103.5125 262.3576 114.1675 243.9769 126.185 226.61 C 134.7747 232.8976 146.8571 231.1986 153.3702 222.7087 C 159.878 214.227 158.4006 202.1294 150.125 195.455 C 156.9939 187.381 164.1844 179.5867 171.6744 172.0946 L 328.8683 348.3661 L 391.195 397.345 C 388.4039 400.4372 385.8568 403.752 383.58 407.26 L 320.1522 359.7269 L 109.2247 253.4913 L 306.6788 383.0662 L 379.545 414.235 C 377.6562 417.9255 376.0489 421.7853 374.755 425.785 L 301.1996 396.2961 L 69.9672 348.2797 L 294.2255 422.3273 L 372.67 433.575 C 371.8138 437.602 371.2635 441.7408 371.05 445.97 L 292.3566 436.525 L 56.5774 450.0001 ZM 449.5426 843.0166 C 438.8521 843.0166 428.2599 842.5878 417.785 841.75 C 418.9253 831.1733 411.418 821.5683 400.8152 820.1719 C 390.1972 818.7734 380.4448 826.1343 378.83 836.67 C 357.7377 832.8369 337.2343 827.3214 317.46 820.265 C 321.3555 810.3242 316.5872 799.0495 306.6803 794.9453 C 296.7784 790.8431 285.4432 795.4401 281.165 805.215 C 261.9251 796.0763 243.5446 785.4192 226.18 773.4 C 232.4668 764.8091 230.7704 752.7252 222.2819 746.2112 C 213.8004 739.7028 201.7029 741.1827 195.03 749.46 C 178.8827 735.7192 163.8588 720.6946 150.12 704.545 C 158.3967 697.8712 159.8783 685.7731 153.3702 677.2904 C 146.8568 668.8002 134.7747 667.101 126.185 673.39 C 114.1679 656.0234 103.5122 637.6419 94.375 618.4 C 104.1489 614.1207 108.7445 602.7846 104.6428 592.8805 C 100.539 582.9723 89.2654 578.208 79.325 582.105 C 72.2693 562.3274 66.7522 541.8163 62.92 520.72 C 73.4566 519.1069 80.8175 509.3544 79.4196 498.7343 C 78.0238 488.1294 68.4157 480.6188 57.84 481.76 C 57.0027 471.2837 56.5774 460.6922 56.5774 450.0001 L 292.3566 463.4746 L 371.05 454.03 C 371.2639 458.2587 371.8139 462.3984 372.67 466.425 L 294.2255 477.6719 L 69.9672 551.7205 L 301.1996 503.704 L 374.75 474.215 C 376.0439 478.2139 377.6514 482.075 379.54 485.765 L 306.6788 516.9335 L 109.2247 646.5083 L 320.1522 540.2732 L 383.575 492.745 C 385.8523 496.2529 388.4033 499.5681 391.195 502.66 L 328.8683 551.6335 L 171.6744 727.9045 L 347.9224 570.6902 L 396.89 508.355 C 399.9814 511.1464 403.2978 513.6979 406.805 515.975 L 359.2817 579.4078 L 253.0601 790.3624 L 382.6179 592.8824 L 413.78 520.01 C 417.4699 521.899 421.3308 523.506 425.33 524.8 L 395.8462 598.3619 L 347.8359 829.625 L 421.8739 605.3375 L 433.12 526.88 C 437.1468 527.7363 441.286 528.2864 445.515 528.5 L 436.0698 607.2067 L 449.5426 843.0166 ZM 727.4114 727.9045 C 719.9201 735.3979 712.129 742.5892 704.055 749.46 C 697.3817 741.1846 685.2847 739.7033 676.8038 746.2112 C 668.3154 752.7252 666.6182 764.8091 672.905 773.4 C 655.5403 785.419 637.16 796.0764 617.92 805.215 C 613.6416 795.4395 602.3075 790.843 592.4054 794.9453 C 582.498 799.0497 577.7332 810.3237 581.63 820.265 C 561.8552 827.3214 541.3481 832.837 520.255 836.67 C 518.6412 826.1331 508.8892 818.7733 498.2705 820.1719 C 487.668 821.5683 480.1603 831.1735 481.3 841.75 C 470.825 842.588 460.2332 843.0166 449.5426 843.0166 L 463.016 607.2067 L 453.575 528.5 C 457.8018 528.2865 461.9392 527.741 465.965 526.885 L 477.2118 605.3375 L 551.2498 829.625 L 503.2396 598.3619 L 473.76 524.8 C 477.7589 523.5067 481.6153 521.9035 485.305 520.015 L 516.4678 592.8824 L 646.0258 790.3624 L 539.8041 579.4078 L 492.285 515.975 C 495.7917 513.6984 499.104 511.1508 502.195 508.36 L 551.1633 570.6902 L 727.4114 727.9045 ZM 842.5088 450.0001 C 842.5088 460.692 842.0826 471.2837 841.245 481.76 C 830.6694 480.6189 821.0625 488.1295 819.6661 498.7343 C 818.2687 509.3543 825.629 519.1069 836.165 520.72 C 832.3321 541.8159 826.8162 562.3272 819.76 582.105 C 809.8201 578.208 798.5468 582.9723 794.443 592.8805 C 790.3409 602.7853 794.9351 614.1214 804.71 618.4 C 795.5724 637.6422 784.9174 656.0233 772.9 673.39 C 764.3112 667.1023 752.2291 668.8007 745.7151 677.2904 C 739.2079 685.7725 740.6844 697.8708 748.96 704.545 C 742.0914 712.6187 734.9012 720.4126 727.4114 727.9045 L 570.217 551.6335 L 507.895 502.66 C 510.6862 499.5685 513.233 496.2523 515.51 492.745 L 578.9336 540.2732 L 789.8606 646.5083 L 592.4064 516.9335 L 519.55 485.765 C 521.4384 482.0755 523.0413 478.2187 524.335 474.22 L 597.8861 503.704 L 829.118 551.7205 L 604.8604 477.6719 L 526.42 466.425 C 527.276 462.3982 527.8214 458.259 528.035 454.03 L 606.7292 463.4746 L 842.5088 450.0001 ZM 449.5426 56.9827 C 460.2331 56.9827 470.825 57.4072 481.3 58.245 C 480.1598 68.8222 487.6677 78.4318 498.2705 79.8278 C 508.8902 81.2259 518.6425 73.8632 520.255 63.325 C 541.348 67.1583 561.855 72.678 581.63 79.735 C 577.732 89.6767 582.4974 100.9502 592.4049 105.0543 C 602.3076 109.1568 613.6418 104.561 617.92 94.785 C 637.16 103.9238 655.5403 114.5807 672.905 126.6 C 666.6187 135.1904 668.3157 147.2741 676.8038 153.7885 C 685.2851 160.2972 697.3819 158.8174 704.055 150.54 C 720.2024 164.2808 735.2261 179.3054 748.965 195.455 C 740.6885 202.1293 739.2077 214.2269 745.7151 222.7087 C 752.2294 231.1989 764.3111 232.8983 772.9 226.61 C 784.9172 243.9767 795.5726 262.3581 804.71 281.6 C 794.9365 285.8792 790.3412 297.215 794.443 307.1187 C 798.5468 317.0273 809.8202 321.7916 819.76 317.895 C 826.8159 337.6723 832.3325 358.1789 836.165 379.275 C 825.629 380.8885 818.2687 390.6453 819.6661 401.2659 C 821.0625 411.8698 830.6693 419.3808 841.245 418.24 C 842.0823 428.7166 842.5088 439.3086 842.5088 450.0001 L 606.7292 436.525 L 528.035 445.97 C 527.8209 441.7411 527.2713 437.6016 526.415 433.575 L 604.8604 422.3273 L 829.118 348.2797 L 597.8861 396.2961 L 524.335 425.785 C 523.0409 421.7861 521.4336 417.925 519.545 414.235 L 592.4064 383.0662 L 789.8606 253.4913 L 578.9336 359.7269 L 515.51 407.255 C 513.2334 403.7477 510.6858 400.4314 507.895 397.34 L 570.217 348.3661 L 727.4114 172.0946 L 551.1633 329.3094 L 502.195 391.64 C 499.1044 388.8493 495.7913 386.3016 492.285 384.025 L 539.8041 320.5923 L 646.0258 109.6373 L 516.4678 307.1172 L 485.305 379.985 C 481.6162 378.0967 477.7579 376.4936 473.76 375.2 L 503.2396 301.6372 L 551.2498 70.3746 L 477.2118 294.6621 L 465.965 373.115 C 461.9395 372.2592 457.8026 371.7136 453.575 371.5 L 463.016 292.793 L 449.5426 56.9827 ZM 449.5426 0.8373 C 201.5098 0.8373 0.4394 201.9343 0.4394 450.0001 C 0.4394 698.0658 201.5098 899.1619 449.5426 899.1619 C 697.576 899.1619 898.6459 698.0658 898.6459 450.0001 C 898.6459 201.9343 697.576 0.8373 449.5426 0.8373 Z" />
+                                    </g>
+                                </g>
+                            </a>
+                            <a xlink:href="" title="South" accesskey="a">
+                                <path id="bottom" d="M 85.4165 374.245 C 85.4536 374.5518 85.4519 374.9915 85.63 376.0158 C 85.9455 377.8304 86.8883 377.0326 86.5727 377.9793 C 86.2572 378.9261 88.0716 382.4074 87.1248 383.9064 C 86.1781 385.4054 86.8899 384.9293 88.5467 385.797 C 90.2035 386.6649 87.5309 386.1924 88.0831 387.8491 C 88.6354 389.5059 89.3331 389.6616 89.3331 389.6616 C 89.3331 389.6616 88.5504 390.8422 88.7081 391.5522 C 88.8659 392.2623 89.0966 392.4999 88.781 393.0522 C 88.4655 393.6045 89.185 395.8121 89.4217 397.4689 C 89.6583 399.1256 89.4115 403.3037 90.4373 405.8283 C 91.4629 408.3529 91.6254 407.88 92.0987 408.9845 C 92.5721 410.0891 92.2608 411.1254 92.7342 412.7033 C 93.2075 414.2812 94.787 414.1161 94.7081 414.5106 C 94.6288 414.905 94.6248 415.1412 94.6248 416.1668 C 94.6248 417.1924 95.5652 416.6443 95.8019 417.3543 C 96.0386 418.0644 96.4387 419.3271 96.8332 421.0627 C 97.2276 422.7983 97.9428 420.979 99.5207 422.0835 C 101.0986 423.188 99.5207 422.3201 98.4165 422.6356 C 97.312 422.9512 97.5449 423.7454 98.255 424.771 C 98.9651 425.7966 99.0426 424.8514 99.9894 426.745 C 100.9361 428.6384 101.0169 430.0506 101.4113 430.7606 C 101.8058 431.4706 102.9119 431.476 103.3852 432.3439 C 103.8586 433.2117 103.7059 434.2388 103.9425 434.87 C 104.1792 435.5009 104.0899 435.1005 106.0623 435.495 C 108.0347 435.8894 106.3817 437.7068 106.2238 438.4168 C 106.0659 439.1269 108.6725 439.8437 108.5936 440.396 C 108.5147 440.9482 108.5916 441.5764 108.7498 442.8387 C 108.9077 444.101 110.3243 443.5386 110.1665 444.4064 C 110.0087 445.2742 109.1397 445.4389 109.2186 446.3856 C 109.2975 447.3323 110.1684 447.9564 111.0363 449.771 C 111.9041 451.5855 112.4539 450.4886 111.8227 451.672 C 111.1916 452.8554 113.5623 455.2241 113.5623 455.2241 C 113.5623 455.2241 112.848 456.0104 112.9269 456.5627 C 113.0058 457.1149 113.4873 458.7671 113.1717 459.1616 C 112.8561 459.556 113.2468 460.4312 113.5623 462.1668 C 113.8779 463.9025 114.0355 463.9854 114.1144 466.0366 C 114.1397 466.6949 114.3493 467.2486 114.6248 467.7762 C 115.2078 468.8924 116.0832 469.8661 116.0832 471.3127 C 116.0832 473.4428 116.5546 472.5816 117.3436 473.8439 C 118.1326 475.1062 120.0324 481.4128 120.4269 482.3595 C 120.8213 483.3063 121.3672 484.7269 122.1561 485.5158 C 122.945 486.3047 124.0486 486.1443 124.9165 486.8543 C 125.7843 487.5643 127.7583 490.9552 129.0207 491.8231 C 130.2829 492.6909 129.8962 492.3054 130.3696 494.12 C 130.843 495.9344 130.9968 495.3754 131.3123 496.9533 C 131.6279 498.5312 131.7062 497.8241 132.9686 499.3231 C 134.2309 500.8221 133.3665 499.8762 133.6821 501.3752 C 133.9976 502.8742 134.3879 502.4789 135.1769 504.1356 C 135.9658 505.7924 135.415 506.8958 135.5727 507.4481 C 135.7306 508.0003 136.4438 508.7149 136.8384 509.6616 C 137.2329 510.6084 136.5921 510.9232 136.7499 511.87 C 136.9077 512.8167 137.3054 514.0013 138.0155 514.9481 C 138.7255 515.8948 139.7551 517.3154 139.7551 518.1043 C 139.7551 518.8932 140.4582 519.6066 140.4582 519.3699 C 140.4582 519.1332 141.0103 518.3387 141.0103 518.3387 C 141.0103 518.3387 141.4104 518.496 142.0415 519.4429 C 142.6727 520.3896 142.4336 520.5468 142.828 521.0991 C 143.2225 521.6514 143.621 521.811 144.0155 522.521 C 144.41 523.2311 143.6249 523.3856 143.6249 523.3856 C 143.6249 523.3856 142.8266 522.9899 142.4322 522.4377 C 142.0377 521.8855 141.9568 521.6536 141.5624 521.4168 C 141.1679 521.1802 140.3853 521.5679 140.3853 521.5679 C 140.3853 521.5679 140.5391 522.9084 140.7759 523.7762 C 141.0126 524.644 143.2186 527.7283 143.2186 531.0418 C 143.2186 534.3554 144.4054 536.8773 144.4843 537.1929 C 144.5632 537.5084 145.0361 537.6703 145.5884 538.3804 C 146.1407 539.0905 145.2811 540.3451 145.2811 541.2918 C 145.2811 542.2386 146.5443 542.7922 147.3332 543.8179 C 148.1222 544.8435 147.9544 545.3196 148.3488 546.7397 C 148.7433 548.1599 150.0908 548.3947 151.9843 550.1304 C 153.8777 551.866 155.8488 553.7606 155.8488 553.7606 C 155.8488 553.7606 157.0309 553.5215 157.5832 553.9949 C 158.1355 554.4683 157.6642 554.9427 157.9009 555.4949 C 158.1375 556.0472 159.8686 557.3873 161.052 558.8074 C 162.2354 560.2275 161.9993 558.6496 163.6561 558.8074 C 165.3129 558.9653 164.6872 559.517 165.2395 560.4637 C 165.7917 561.4104 168.2329 561.3335 169.9686 561.3335 C 171.7043 561.3335 171.3938 560.545 172.6561 559.6772 C 173.9184 558.8094 174.4675 558.0977 175.6509 557.7033 C 176.8343 557.3088 177.1455 556.9133 177.6978 556.2033 C 178.25 555.4919 178.8843 555.5739 179.5155 555.4949 C 180.1466 555.4161 182.2751 555.2632 182.354 553.9221 C 182.4329 552.5809 183.4613 547.6018 183.1457 546.2606 C 182.8301 544.9194 183.3853 544.3683 185.5155 542.396 C 187.6456 540.4236 188.5863 542.4796 190.4009 541.9272 C 192.2154 541.3749 192.1411 540.8269 192.6145 540.4324 C 193.0878 540.038 193.6393 540.4285 194.8228 540.3492 C 196.0062 540.2703 199.6313 539.7979 200.578 539.7189 C 201.5248 539.64 201.5222 538.6894 201.3645 537.9794 C 201.2066 537.2693 199.3953 536.0891 198.3697 534.9846 C 197.3441 533.88 198.0503 532.9269 198.2082 531.9012 C 198.3661 530.8756 202.1147 526.1159 203.6926 524.9325 C 205.2705 523.7491 204.2121 522.6744 203.8176 522.4377 C 203.4231 522.201 203.7419 521.0244 205.6353 519.6044 C 207.5288 518.1843 207.1226 519.1214 209.4895 519.5159 C 211.8563 519.9103 214.7864 519.441 216.9165 518.5731 C 219.0467 517.7053 216.828 516.9201 216.828 516.0523 C 216.828 515.1844 216.4351 513.5231 216.6718 511.7086 C 216.9085 509.894 215.5719 507.3643 216.203 504.2086 C 216.8342 501.0529 214.4635 497.3517 214.4635 496.5627 C 214.4635 495.7738 215.1776 495.6106 215.651 494.9794 C 216.1243 494.3482 215.653 493.7238 214.8645 492.6982 C 214.0756 491.6725 214.7812 491.2711 214.7812 491.2711 C 214.7812 491.2711 215.1025 490.804 215.2604 490.094 C 215.4182 489.3839 215.8107 486.3108 216.5208 485.4429 C 217.2309 484.5752 217.7816 483.9431 218.8073 483.3909 C 219.8329 482.8386 220.4595 481.4195 221.4062 480.0784 C 222.353 478.7372 221.4062 478.0992 221.4062 478.0992 C 221.4062 478.0992 220.8536 477.3166 220.3802 476.9221 C 219.9068 476.5276 220.3802 475.8179 220.3802 475.8179 C 220.3802 475.8179 222.1233 475.1872 222.8333 474.7137 C 223.5434 474.2404 223.6964 473.4458 225.9843 469.4221 C 226.2942 468.8772 226.5186 468.3232 226.6666 467.7763 C 227.6116 464.284 225.6171 460.9479 225.276 460.2659 C 224.8815 459.4769 223.382 459.089 222.1198 458.5367 C 220.8575 457.9844 221.3265 456.4846 222.0365 456.4846 C 222.7465 456.4846 223.7713 457.8328 224.7969 457.9117 C 225.8225 457.9906 225.3491 455.2975 224.7969 454.1929 C 224.2446 453.0884 223.8542 452.6188 223.8542 451.6721 C 223.8542 450.7254 223.6973 450.9626 223.224 450.0159 C 222.7506 449.0691 222.1942 449.4582 222.0365 448.4325 C 221.8786 447.407 221.8044 446.9402 221.5677 446.1513 C 221.331 445.3623 220.7768 445.9089 220.6979 445.12 C 220.619 444.3311 221.9639 444.5742 222.9896 443.3909 C 224.0152 442.2075 223.1465 442.2024 223.0677 440.7034 C 222.9888 439.2044 222.4295 437.0827 221.6406 435.0315 C 220.8516 432.9802 221.0195 433.372 220.625 431.5575 C 220.2321 429.743 220.623 429.8214 220.2291 428.4013 C 219.8347 426.9812 220.7751 425.4752 221.4062 424.844 C 222.0374 424.2129 222.9813 424.0562 223.2969 423.6617 C 223.6118 423.2672 223.1463 423.2699 223.6198 422.3232 C 224.0931 421.3764 224.1695 421.6055 224.4062 420.4221 C 224.6429 419.2387 224.8799 419.5587 225.9844 418.3752 C 227.0889 417.1918 229.928 416.088 231.4271 416.1669 C 232.926 416.2458 233.7126 417.8251 234.3437 418.6929 C 234.9749 419.5608 237.7401 417.8235 238.2135 416.719 C 238.6869 415.6144 238.6038 415.6099 239.7083 414.5054 C 240.8129 413.4008 240.1873 414.0324 240.7396 413.4013 C 241.2918 412.7701 240.7346 411.8286 241.7604 411.2763 C 242.786 410.7241 242.5526 411.1186 243.026 408.594 C 243.4994 406.0694 242.4717 406.8579 244.8385 405.4377 C 247.2053 404.0177 246.9728 405.6761 248.1562 406.8596 C 249.3396 408.043 249.5729 406.6252 251.7031 406.6252 C 253.8332 406.6252 254.544 405.7519 256.4375 405.0419 C 258.331 404.3318 256.6812 404.2554 257.8646 404.2554 C 259.048 404.2554 258.9639 404.3337 259.9896 403.7815 C 261.0152 403.2292 261.3281 403.3069 261.3281 402.8336 C 261.3281 402.3603 261.5606 402.1991 262.8229 401.5679 C 264.0852 400.9368 263.5364 399.9958 263.5364 397.7867 C 263.5364 395.5776 263.2963 395.892 262.8229 394.7086 C 262.3495 393.5251 262.5862 393.6048 262.8229 392.5002 C 263.0596 391.3957 264.8 391.0772 266.6146 390.1304 C 268.4291 389.1837 268.4356 388.479 269.6979 387.4534 C 270.9602 386.4278 271.1111 386.1914 272.5312 386.3492 C 273.9513 386.507 273.0866 385.7972 274.3489 385.245 C 275.6112 384.6928 275.6909 385.1639 276.401 384.9273 C 277.1111 384.6906 280.3397 381.1381 281.2864 380.3492 C 282.2332 379.5602 281.5297 379.0098 281.6875 376.9586 C 281.8033 375.4533 282.1723 374.7991 282.7343 374.245 L 85.4165 374.245 L 85.4165 374.245 Z" />
+
+                            </a>
+
+                        </g>
+                    </svg>
+                </section>
+                <section>
+                    <span>Path</span>
+
+                    <pre><code ><path class="bottom" d="M..."/>
+</code>
+</pre>
+                </section>
+                <section>
+                    <span>Apply CSS styles</span>
+
+                    <pre><code >.india .bottom { 
+    transition: .6s fill; 
+    fill: #D3D3D3;
+}
+.india .bottom:hover { 
+    fill: #22aa22; 
+}</code>
+                    </pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Image Maps</h2>
+                    <svg id="Maps" viewBox="0 0 1600 988" style="background-color:#ffffff00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="1600px" height="988px">
+                        <svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+                            <g id="island" transform="translate(85.79,0.708441) scale(0.5)">
+                                <g id="LittleIsland">
+                                    <a xlink:href="" title="Island" accesskey="a">
+                                        <clipPath id="image-clipper">
+                                            <path id="CA-AB" d="M48.44,464.46l-1.94,4.02c-0.92,1.92-3.58,3.12-5.35,1.55c-1.91-1.69-3.27-3.87-5.15-5.58c-0.92-0.84-2.22-1.23-3.45-1.05
+	c-1.31,0.18-1.31,2.49-1.22,3.39c0.1,1.07,0.4,2.15,0.25,3.24c-0.55,3.88-0.65,3.67-1.29,7.54c-0.08,0.51,0.18,0.99,0.27,1.48
+	c0.15,0.82-0.13,1.63-0.14,2.45c-0.03,2.06,0.6,4.01,1.52,5.84c3.17,6.29,2.99,5.37,3.35,12.43c0.11,2.22,0.42,4.44,1.47,6.44
+	c0.59,1.12,1.74,2.3,1.56,3.7c-1.87,14.09-1.21,8.79-3.35,22.84c-0.31,2.05,0.22,4.26,1.58,5.84l17.56,20.54
+	c0.88,1.03,2.22,1.54,3.54,1.66c1.99,0.2,4.14,0.09,6-0.7c1.59-0.66,2.56-2.01,3.55-3.35c0.76-1.03,1.52-2.12,2.78-2.58
+	c1.31-0.47,2.73-0.66,3.96-1.37c2.62-1.53,3.84-4.51,5.27-7.02c0.69-1.21,1.55-2.39,2.78-3.09c2.96-1.7,6.62-1.13,9.6,0.19
+	c0.89,0.4,1.77,0.99,2.78,1.04c0.83,0.04,0.97-0.18,1.8,0.03c1.63,0.42,2.9,1.59,4.01,2.77c1.57,1.65,3.08,3.74,5.45,4.2
+	c4.07,0.8,8.25,1.23,12.39,0.86c1.67-0.15,2.98-1.19,4.44-1.89c1.66-0.79,3.74-0.79,5.09-2.18c1.19-1.21,1.25-3.19,2.68-4.21
+	c1.09-0.78,2.46,0.01,3.65-0.15c3.75-0.5,7.33-1.77,10.62-3.62c3.75-2.11,6.82-5.68,9.91-8.52c1.72-1.58,3.84-2.51,5.68-3.93
+	c0.98-0.75,1.5-1.96,2.47-2.72c0.97-0.75,7.45-0.82,7.18-0.58c1.8-3.46-0.79-7.69,0.72-11.25c5.8-13.75,1.04-24.06,3.75-37.57
+	c1.02-5.04,7.88-10.42,11.38-13.78c4.11-3.95,4.01-10.45,7.09-15.13c7.6-11.56,0.42-33.64,17.07-33.71c4.48-0.03,9.02,2.11,9.1,1.66
+	c0.42-2.36,1.58-4.61,1.89-6.99c0.25-1.95-0.42-6.74,1.38-8.21c6.48-5.32,10.55-6.33,14.87-14.06c1.25-2.24,3.78-3.51,4.83-5.48
+	c5.59-10.55-10.46-32.31,16.22-30.9l-0.04-1.24v0.26l0.02,0.57c-0.05-1.81-0.09-3.66,0.34-5.43c1.55-6.48,8.22-9.24,14.29-7.59
+	l0.34,0.13c5.47-6.68,7.86-9.11,5.64-16.09c-2.27-7.12-1.59-21.09,6.65-24.01c3.43-1.22,5.96-0.08,7.01-0.36
+	c5.31-1.46,6.27-8.51,15.31-2.09c0.8,0.57,3.64-6.21,3.8-6.54c3.23-6.76,5.51-14.09,5.58-21.62c0.05-5.02-1.77-9.84-1.77-14.83
+	c0-0.11,0.29-0.51,0.09-0.64c-0.39-0.25-0.64,0.05-1.03-0.24c-1.07-0.84-1.66-1.91-2.5-2.97c-1.34-1.69-2.28-2.76-3.93-4.17
+	c-1.33-1.14-2.76-2.07-4.27-2.95c-1.85-1.07-3.89-1.61-5.87-2.36c-1.02-0.39,0.68-1.53,1.48-2.27c0.95-0.88,2.33-2.24,1.71-3.69
+	c-0.84-1.96-2.19-4.39-4.62-4.51c-2.4-0.13-4.22,2.11-4.72,4.26c-0.19,0.8,0,1.62-0.04,2.43c-0.22,3.9-2.66,2.76-5.53,3.08
+	l-1.54,0.22c-3.63,0.2-6.68-2.71-9.59-4.41c-0.64-0.38-1.42-0.54-1.93-1.14l-14.43-17.16l-11.52-13.27
+	c-1.85-2.13-2.97-4.91-3.03-7.74c-0.07-3.53,0.05-7.08-0.39-10.59c-0.37-2.99-0.99-5.96-1.12-8.98c-0.14-3.32,0.11-6.69,1.03-9.89
+	c0.36-1.25,1.4-2.13,2.17-3.11c1.21-1.53,2.34-3.44,2.02-5.48l-1.56-9.78l0.09-0.76l0.75-7.86l2.1-26.12
+	c0.21-2.75-0.82-5.39-1.92-7.86c-0.25-0.57-0.7-1.17-0.63-1.84c0.29-2.54,1.06-4.99,1.91-7.39l0.6-1.63
+	c0.96-2.08,2.6-3.85,4.62-4.95c2.35-1.27,4.9-2.23,7.1-3.79c3.12-2.22,4.35-6.14,4.75-9.78c0.35-3.18,0.58-6.39,1.14-9.55
+	c0.85-4.75,2.24-9.57,1.53-14.44c-1.05-7.12-2.63-14.14-4.13-21.17c-0.45-2.08-0.88-4.18-1.57-6.2c-1.27-3.71-5.8-4.64-9.2-5.07
+	c-3.32-0.41-6.69,1.63-8.11,4.62c-0.33,0.7-0.03,1.49,0.06,2.19c0.6,4.56,0.34,9.48-2.11,13.5c-0.49,0.8-1.45,1.19-2.31,1.42
+	l-5.15,1.23c-1.14,0.25-3.58,0.47-3.63-1.3c-0.07-2.61,0.5-5.16,1.18-7.66c0.37-1.35,1.26-3.36-0.2-4.41
+	c-3.74-2.71-8.47-3.38-12.98-3.02l-1.49,0.16c-2.45,0.37-4.81,1.91-5.77,4.25c-1.07,2.58-1.86,5.42-3.67,7.63
+	c-2.26,2.75-5.36,4.65-8.15,6.78c-1.83,1.4-1.89,3.88-2.11,5.97c-0.06,0.6-0.05,1.3-0.51,1.77c-1,1.03-2.2,1.91-2.95,3.17
+	c-0.61,1.01-0.67,2.24-0.84,3.37c-0.29,1.82-0.56,4.16-2.44,5.06c-1.64,0.77-3.27-0.66-4.24-1.82l-7.74-9.14
+	c-2.47-2.93-3.18-6.82-4.52-10.31c-1.08-2.83-3.93-4.39-6.53-5.6c-2.23-1.05-2.16-0.97-2.17-0.97c0,0.01-0.08-0.04-2.1-1.09
+	c-1.39-0.73-2.83-1.47-4.31-0.5c-0.66,0.43-1.4,1.33-2.33,1.22c-0.35-0.04-0.75-0.49-1.13-0.23c-1.02,0.69-1.66,1.81-2.02,2.96
+	c-0.28,0.92,0.9,1.49,0.76,2.39c-0.39,2.56-1.1,5.06-1.78,7.55c-1.12,4.15-2.54,8.33-2.44,12.68c0.06,2.93,0.56,5.83,0.61,8.76
+	c0.08,5.61-0.23,11.22-0.93,16.78c-0.5,3.94-1.44,7.81-2.37,11.67c-0.39,1.61-1.05,3.15-1.8,4.62c-0.63,1.2-1.66,2.39-1.7,3.82
+	l0.01,1.02c-0.05,1.08-0.13,1.63-0.38,2.69c-0.83,3.41-2.73,6.42-4.5,9.4l-0.15,0.21c-1.78,1.27-4.09,2.69-4.27,5.12l0.01,1.15
+	c-0.01,0.28-0.3,0.42-0.45,0.6c-1.85,2.21-2.8,4.97-4.29,7.4c-1.26,2.05-2.96,3.76-4.49,5.59c-2.18,2.62-4.05,5.46-5.74,8.42
+	c-2.52,4.43-4.77,9.17-8.62,12.64l-1.2,0.96l-8.29,6.74c-1.42,1.15-1.1,3.17-1.21,4.77c-0.08,1.11-0.45,2.18-1.05,3.11
+	c-1.19,1.81-2.53,3.55-3.49,5.5l-5.01,10.27c-2.24,4.69-2.28,5.62-1.31,10.71c0.43,2.24,1.07,4.43,0.89,6.73
+	c-0.17,2.17-0.72,4.35-0.43,6.54c0.09,0.67,0.49,1.28,0.43,1.97l-0.94,10.91c-0.24,2.81,1.86,5.27,4.26,6.44
+	c0.89,0.43,1.86,0.72,2.65,1.32c1.82,1.39,3.61,3.06,4.4,5.27c1,2.82,1.73,5.72,2.39,8.63l0.95,4.57c1.04,4.6,2.57,9.07,3.55,13.68
+	c0.78,3.64,1.03,7.37,1.43,11.07c0.23,2.19,0.72,4.5-0.07,6.64c-1.19,3.26-2.09,5.55-3.5,8.72c-0.34,0.78-1.11,1.26-1.76,1.76
+	c-2.93,2.28-5.96,4.47-8.63,7.07c-1.61,1.58-1.43,4.3-0.07,5.98c1.11,1.37,2.37,2.64,3.36,4.11c2.24,3.29-0.68,7.21-3,9.52
+	c-1.54,1.52-3.46,2.92-4.11,5.1c-0.23,0.79-0.06,1.62-0.18,2.43c-0.17,1.13-1.06,1.85-1.9,2.51c-2.46,1.93-3.62,2.93-4.77,5.83
+	c-0.44,1.12-0.65,2.35-1.39,3.34c-0.97,1.29-2.35,2.22-3.64,3.15c-2.18,1.56-4.48,2.99-7.01,3.93c-2.64,0.99-5.38,1.74-7.92,2.99
+	c-0.56,0.27-0.74,0.51-1.2,0.91l-13.78,11.96c-2.52,2.2-3.34,5.63-4.02,8.75l-1.72,8.06c-0.41,1.98-0.64,4.28,0.56,6.06
+	c0.86,1.27,2.02,2.29,3.09,3.38c1.94,1.97,3.92,4.03,5.1,6.57c1.31,2.83,1.73,5.98,2.37,8.99l1.32,6.16l1.76,7.2
+	c0.47,2.04,0.81,4.61-0.82,6.25c-2.03,2.06-4.42,3.7-6.64,5.54c-3.37,2.79-5.35,7.11-5.44,11.46c-0.05,2.35,0.4,4.67,0.84,6.96
+	c0.57,2.94,1.39,5.95,3.2,8.39c0.53,0.72,1.2,1.37,1.57,2.21l2.49,5.72c0.27,0.6,0.78,2.37-0.19,2.72c-0.76,0.28-1.62,0.1-2.28-0.34
+	L48.44,464.46z" stroke="#661a00" stroke-width="2" fill="#36d900" />
+                                        </clipPath>
+                                        <image clip-path="url(#image-clipper)" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg" x="-200" y="0" role="image" title="Crowsnest Pass"></image>
+                                    </a>
+                                </g>
+
+
+                                <g id="LittleIsland1">
+                                    <a xlink:href="" title="Island" accesskey="a">
+                                        <clipPath id="image-clipper1">
+                                            <path id="CA-AB" d="M23.17,516.25c-0.11-0.72-0.53-1.45-1-2.02c-3.03-3.68-6.05-7.35-9.2-10.91c-1.67-1.88-2.99-3.74-3.46-6.34
+	c-0.66-3.72-2.41-7.16-1.97-11.17c0.23-2.09-0.86-4.31-0.83-6.44c0.05-1.7,0.89-3.39,1.37-5.09c0.14-0.55,0.37-1.13,0.36-1.7
+	c-0.05-2.9-0.31-5.81-0.23-8.7c0.14-5.18,1.55-10.04,3.85-14.68c1.06-2.13,1.98-4.36,2.62-6.63c0.26-0.96-0.1-2.37-0.72-3.18
+	c-1.08-1.41-1.37-2.68-0.48-4.2c0.09-0.15,0.2-0.31,0.21-0.45c0.57-4.2,1.41-8.39,1.52-12.59c0.03-1.43-1.5-3.15-2.74-4.32
+	c-1.79-1.69-2.98-3.3-2.43-5.97c0.47-2.37-0.37-4.44-2.11-6.27c-3.67-3.88-7.22-7.9-10.72-11.96c-0.54-0.61-0.64-1.67-0.77-2.54
+	c-0.3-2.07-0.27-4.19-0.76-6.2c-0.64-2.49-0.35-3.14,1.98-4.01c1.28-0.48,2.41-1.4,3.58-2.19c1.16-0.82,2.25-1.77,3.44-2.59
+	c2.02-1.39,2.53-3.2,1.12-5.23c-1.01-1.46-2.23-2.8-3.52-4.02c-1.61-1.53-2.31-3.26-2.13-5.46c0.55-6.63,1.02-13.26,1.55-19.88
+	c0.07-0.84,0.07-1.85,0.51-2.46c1.72-2.38,0.82-4.32-0.74-6.23c-1.02-1.25-2.26-2.36-3.1-3.72c-2.34-3.8-4.74-2.87-6.87,0.75
+	c-1.23,2.09-1.76,4.55-2.81,6.76c-0.48,1.01-1.33,1.98-2.25,2.64c-3.17,2.26-4.64,5.12-4.64,9.11c0,4.58-0.14,9.25-1.05,13.73
+	c-0.71,3.52-1.91,7.08-5.38,9.45c-3.06,2.08-5.6,4.88-8.42,7.33c-1.66,1.44-3.4,2.78-5.08,4.2c-4.41,3.7-8.81,7.42-13.21,11.13
+	c-2.08,1.75-4.19,3.45-6.17,5.27c-1.38,1.27-1.26,2.8,0.03,4.06c1.56,1.53,1.84,3.3,1.62,5.37c-0.37,3.37-0.44,6.77-0.85,10.13
+	c-0.3,2.32-1.01,4.58-1.5,6.87c-0.15,0.66-0.48,1.41-0.28,1.97c0.88,2.43,1.66,4.79,0.65,7.43c-0.2,0.5,0.52,1.66,1.12,2.1
+	c2.55,1.87,2.65,4.16,1.47,6.77c-0.21,0.47-0.4,0.95-0.63,1.41c-1.96,4.14-1.88,4.04,1.57,7.31c1.78,1.68,3.18,3.74,4.78,5.61
+	c5.82,6.76,11.68,13.49,17.43,20.3c0.7,0.83,0.98,2.18,1.03,3.31c0.12,2.28,0.03,4.59-0.2,6.85c-0.06,0.68-0.79,1.38-1.37,1.9
+	c-2.29,2.05-4.29,3.9-4.2,7.63c0.06,2.67,0,4.66,1.97,6.85c0.97,1.07,0.61,3.82,0.13,5.62c-0.77,2.87,0.3,5.13,2.27,6.57
+	c3.67,2.73,3.38,6.25,2.63,9.86c-0.49,2.34,0.15,3.76,1.86,5.33c2.34,2.18,4.35,4.74,6.65,7.32c1.18,0.22,2.4,0.7,3.61,0.66
+	c5.93-0.15,11.85-0.48,17.77-0.65c1.23-0.04,2.63,0.16,3.68,0.75c3.81,2.15,7.14,0.45,10.21-1.36c2.6-1.52,5.44-3.41,6.86-5.91
+	c1.46-2.53,4.02-4.88,3.57-8.32C23.97,522.22,23.64,519.22,23.17,516.25z" />
+                                        </clipPath>
+                                        <image clip-path="url(#image-clipper1)" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg" x="-400" y="0" role="image" title="Crowsnest Pass"></image>
+                                    </a>
+                                </g>
+
+                                <g id="LittleIsland2">
+                                    <a xlink:href="" title="Island" accesskey="a">
+                                        <clipPath id="image-clipper2">
+                                            <path id="CA-AB" d="M138.82,676.02c-0.99-1.17-2.15-2.16-3.48-3.43c-1.23-0.44-2.8-1.57-4.03-1.3c-5.14,1.21-10.48,2.24-15.15,4.52
+	c-3.39,1.7-6.01,2.3-9.64,1.13c-2.19-0.7-5.48-0.48-7.32,0.79c-4.71,3.19-9.59,6.59-13.11,10.96c-4.88,6.03-11.22,6.29-17.22,5.06
+	c-10.18-2.14-19.55-0.64-29,2.85c-3.99,1.5-7.57,1.79-11.25-1.27c-4.7-3.95-9.99-2.42-15.33-1.12c-3.18,0.77-6.72,1.01-10,0.56
+	c-4.24-0.54-7.04,0.88-9.06,4.44c-2.1,3.72,0.25,5.79,2.66,8.32c5.13,5.4,9.87,11.16,14.71,16.83
+	c8.52,10.03,16.84,20.23,25.56,30.08c5.33,6.04,10.26,5.83,15.28-0.46c3.29-4.13,6.06-5.22,10.37-1.26c1.48,1.38,4.7,1.6,6.96,1.33
+	c4.21-0.56,7.03,0.54,9.03,4.34c2.63,5,6.71,7.72,12.59,7.45c1.3-0.06,2.68,0.21,3.98,0.5c7.89,1.77,15.8,3.87,23.77,5.26
+	c2.81,0.5,6.04-0.26,8.84-1.18c4.47-1.47,8.88-3.27,13.05-5.45c4.7-2.47,9.39-2.31,14.42-1.51c10.79,1.71,20.31-0.71,27.83-9.22
+	c1.37-1.54,3.39-2.48,5.16-3.59c6.11-3.78,7.01-9.02,2.41-14.38C173.5,716.17,156.17,696.1,138.82,676.02z" />
+                                        </clipPath>
+                                        <image clip-path="url(#image-clipper2)" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg" x="-200" y="0" role="image" title="Crowsnest Pass"></image>
+                                    </a>
+                                </g>
+
+                                <g id="LittleIsland3">
+                                    <a xlink:href="" title="Island" accesskey="a">
+                                        <clipPath id="image-clipper3">
+                                            <path id="CA-AB" d="M1047.53,92.8c0,0-9.48,9.91-7.38,11.88c2.09,1.96-7.81,5.11-1.07,9.13c6.74,4.02,4.81,44.06,6.96,48.56
+	c2.16,4.51-5.38,12.74-1.76,15.07c3.63,2.33-6.83,14.65-1.99,17.07c4.83,2.4-2.05,5.06-0.97,8.3c1.07,3.24-10.38,3.9-11.77,7.05
+	c-1.4,3.14-11.23,5.09-12.9,8.19c-20.45,38.07-66.48,44.44-83.61,35.02c-3.1-1.71,5.43-28.04,3.69-28.2
+	c-1.75-0.15-12.73,1.22-12.73,1.22s-4.85-6.14-9.6-6.72c-4.77-0.58-30.72-0.96-30.72-0.96s-14.14,15.88-16.19,11.39
+	c-2.04-4.5-17.01-28.32-19.27-32.5c-2.25-4.19-24.06-15.66-18.79-22.62c5.28-6.96-2.97-24.35,2.1-21.66
+	c5.06,2.69,21.95-68.33,33.97-67.36c12.01,0.97,22.67-3.17,33.44-2.98c10.76,0.17,14.03-1.43,19.46-3.57
+	c5.42-2.14,9.63-5.94,17.6-6.63c7.96-0.7,16.76-0.73,28.38,3.32c11.61,4.03,32.5,12.48,32.5,12.48l39.09-1.76
+	c0,0,6.55-7.32,12.56-2.29L1047.53,92.8z" />
+                                        </clipPath>
+                                        <image clip-path="url(#image-clipper3)" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg" x="400" y="-10" role="image" title="Crowsnest Pass"></image>
+                                    </a>
+                                </g>
+                                <g id="LittleIsland4">
+                                    <a xlink:href="" title="Island" accesskey="a">
+                                        <clipPath id="image-clipper4">
+                                            <path id="CA-AB" d="M311.6,299.7c0.8,0.57,3.64-6.21,3.8-6.54c3.23-6.76,7.51-17.09,7.58-24.62c0.05-5.02-1.77-9.84-1.77-14.83
+	c0-0.11,0.29-0.51,0.09-0.64c-0.39-0.25,4.71,2.39,4.71,2.39c0.33,0.42,0.52,0.91,0.38,1.45l-0.15,0.31l-0.16,0.31l0.13-0.25
+	l2.29-4.12c1.65-2.84,8.68-6.44,10.96-8.79c2.44-2.51,0.71-2.72,3.39-4.98c2.24-1.89,4.62-3.69,7.34-4.86l8.31-3.57
+	c3.24-1.39,6.3-7.87,9.96-7.58c13.9,1.11,19.15,2.09,32.84-2.6c7.49-2.57,13.31-8.45,21.08-10.39c0.78-0.19,1.64-0.44,2.46-0.34
+	c11.04,1.29,12.87,6.9,25.16,3.19c4.12-1.25,7.84-3.7,10.82-6.8l-0.05,0.05c4.64,5.04,12.69,5.34,19.01,5.92
+	c3.61,0.33,5.28-0.29,8.72-1c6.65-1.37,13.47-1.22,20.21-0.84c9.61,0.55,18.1,7.08,27.91,6c11.98-1.33,22.72-9.61,35.11-7.74
+	c9.54,1.43,18.87,5.18,26.36,11.33c2.2,1.8,6.64,10.13,10.39,6.93l5.21-4.46c1.46-1.25,3.81-0.86,5.05,0.5
+	c1.03,1.13,2.02,2.3,2.8,3.62c0.62,1.05,1.06,2.26,1.04,3.5c-0.06,2.8-0.62,5.56-0.78,8.35c-0.06,0.99,0.22,1.99,0.8,2.8
+	c1.38,1.93,3.07,3.62,4.73,5.32c0.36,0.38,0.99,0.78,0.96,1.4c-0.16,3.5-0.81,7.18-3,10.03c-0.5,0.65-1.2,1.2-1.49,2
+	c-0.59,1.58,0.67,3.12,1.84,4.01c1.37,1.05,3.03-0.4,3.82-1.48c2.89-3.94,5.27-8.67,9.62-11.27c0.9-0.54,1.95-0.24,2.92-0.16
+	c1.78,0.17,3.86,0.33,5.32-0.92l12.39-10.57c3.65-3.11,7.98-5.61,10.77-9.62c2.08-3,3.67-6.3,5.45-9.48
+	c0.79-1.4,0.64-0.88,1.52-2.21l2.02-3.16c1.68-2.87-0.16-6.19-2.13-8.36c-1.73-1.89-1.29-1.21-2.87-3.24
+	c-1.06-1.36-0.74-3.19-0.66-4.78c0.06-1.12,0.07-2.35-0.65-3.28c-2.77-3.57-4.71-5.78-7.73-9.13c-0.82-0.91-1.89-1.65-3.11-1.87
+	c-3.09-0.57-6.25-0.57-9.37-0.8c-1.74-0.13-2.95-1.82-3.01-3.47c-0.04-1.24,0.07-2.5-0.15-3.74c-0.33-1.91-1.79-3.32-2.96-4.77
+	c-2.33-2.88-1.61-3.18,0.35-6.05c2.26-3.3,4.11-8.07,1.42-11.67l-0.35-0.37c-1.56-2.83-2.51-5.95-3.29-9.07
+	c-0.92-3.68-1.64-7.41-2.06-11.18c-0.41-3.73-0.47-7.5-0.86-11.23c-0.18-1.68-0.67-3.3-0.99-4.95c-0.38-1.93,0.71-3.84,2.11-5.08
+	c1.45-1.28,3.16-2.31,4.39-3.84c0.91-1.14,1.24-2.61,1.66-3.97c0.55-1.77,1.03-3.72,2.44-5.03c4.03-3.76,2.69-2.47,6.9-6.02
+	c0.88-0.75,2.81-2.83,4.18-1.89c1.6,1.09,2.98,2.8,3.07,4.81c0.07,1.53-0.11,0.76,0.06,2.28c0.24,2.15,1.77,3.91,2.83,5.68
+	c1.54,2.58,0.97,5.72,0.72,8.54c-0.37,4.31-0.78,8.62-0.85,12.95c-0.03,1.63,1.19,2.96,2.46,3.83c1.04,0.72,2.19-0.81,2.83-1.3
+	c0.97-0.74,2.62-1.35,3.66-0.39c1.13,1.06,2.25,2.54,1.93,4.19c-0.51,2.63-2.29,4.86-3.61,7.09c-0.64,1.08-1.98,3.83-0.84,5.04
+	c0.79,0.84,2.06,1.16,3.18,1.17c3.93,0.01,7.37-1.8,10.36-4.23l4.03-3.47c0.93-0.78,2.26-1.39,3.47-0.91
+	c1.66,0.66,3.24,2.35,2.91,4.25c-0.35,2.06-1.19,3.98-1.81,5.95c-1.28,4.1-2.13,8.32-2.62,12.59c-0.06,0.53,0.32,0.98,0.5,1.43
+	l2.3,5.83c0.69,1.75,2.73,2.73,4.52,2.07c1.48-0.54,3.25-1.83,4.82-0.75c2.25,1.55,3.31,4.65,2.47,7.25
+	c-0.92,2.83-2.35,5.45-3.56,8.15c-0.75,1.68,0.57,3.14,1.95,3.93c2.1,1.21,4.61-0.09,6.68-0.66c3.4-0.93,7.52-0.81,10.21,1.75
+	l0.47,0.61c2.6,2.75,6.29,3.75,9.82,2.22c2.02-0.87,2.47-3.33,3.27-5.12c1.06-2.37,2.47-4.55,3.68-6.83
+	c0.5-0.93,0.54-2.06,0.74-3.07c0.56-2.76,1.43-3.45,4.07-4.37c2.84-0.99,5.96-1.57,8.27-3.63c2.26-2.02,4.37-4.24,6.89-5.95
+	c1.41-0.94,3.11-1.37,4.79-1.39c1.86-0.02,3.58,1.69,3.54,3.56c-0.07,2.55-0.8,4.93-1.55,7.35c-0.78,2.55-1.74,5.19-1.32,7.9
+	c0.03,0.24,0.23,0.49,0.11,0.74c-1.13,2.27-2.51,4.4-3.75,6.61c-1.38,2.44-1.15,5.25-0.09,7.76c0.78,1.83,1.81,3.68,1.35,5.74
+	c-0.11,0.5-0.79,1.89,0.09,2.25c0.72,0.31,1.5,0.18,2.25,0.05c1.11-0.19,2.68-0.95,3.55,0.17c0.97,1.27,0.27,3.05-0.58,4.16
+	l-0.55,0.55c-2.29,2.5-2.63,4.38-0.32,7.05l8.29,9.61c1.21,1.41,3.12,2.45,5.01,2.04c0.82-0.17,1.63-0.54,2.49-0.5
+	c0.88,0.04,1.73,0.44,2.32,1.08c0.65,0.7-0.46,1.67-0.78,2.12c-1.15,1.61-1.32,3.9-0.09,5.51c1.8,2.36,3.62,4.77,5.85,6.74
+	c2.35,2.07,6.03,2.07,8.43,0.1l7.99-6.68c1.56-1.34,2.36-2.3,3.85-3.71c1.17-1.11,3.31-1.28,4.43,0l4.5,5.17
+	c0.77,0.89,2.23,1.92,3.39,1.1c1.15-0.81,0.37-2.36-0.05-3.33c-2.09-4.89-2.98-5.98,1.65-9.13c4.04-2.76,8.78-4.38,13.57-5.2
+	c1.18-0.2,2.25,0.57,3.26,0.99l5.57,2.27c0.76,0.31,1.6,0.58,2.15,1.22l4.54,5.15c2.32,2.64,3.12,6.36,2.41,9.77
+	c-0.63,3.05-2.68,5.62-4.23,8.21c-0.54,0.89-0.65,1.27-0.95,2.27l-0.76,2.66l-1.24,5.25c-0.58,2.36-1.22,4.71-2.11,6.98
+	c-0.84,2.13-1.94,4.16-2.98,6.21l-4.1,8.13c-0.83,1.61-2.14,2.9-3.21,4.34c-0.71,0.96-1.23,1.87-1.63,3l3.13,0.53
+	c2.91,0.44,5.86,0.53,8.78,0.75c3.29,0.25,6.78,0.9,9.15-1.99c3-3.64,5.32-7.77,7.97-11.66l2.26-3.03c4.46-6.07-0.01-0.01,4.36-6.14
+	c0.76-1.06,0.46-0.51,1.31-1.48c1.95-2.18,3.65-4.56,5.44-6.86c0.92-1.18,1.84-2.4,2.98-3.38l2.53-2.1
+	c0.86-0.76,1.66-1.94,2.93-2.04l1.52,0.05c1.29-0.01,0.67-0.01,1.8-0.53c3.07-1.4,5.24-1.92,8.56-1.08l3.17,0.86
+	c2.11,0.63,4.27,1.62,5.64,3.41c0.57,0.75,0.09,0.37,0.82,0.97c2.51,2.05,5,4.16,7.81,5.81c0.46,0.28,0.99-0.09,1.46-0.09
+	c0.77,0,1.95,0.23,2.67,0.51c2.12,0.83,3.82,2.46,5.99,3.18c0.69,0.23,0.78-0.05,1.47,0.07c0.32,0.06,0.65,0.33,0.84,0.58
+	c1.23,1.56,0.86,3.67,0.89,5.5c0.04,1.92,1.09,3.65,2.28,5.09c4.97,6.02,10.24,11.8,15.37,17.69c1.18,1.34,1.38,3.24,1.38,4.96
+	l-0.11,2.68c0,2.66,0.41,5.32,1.25,7.85c0.38,1.13,1.21,2.04,1.97,2.92l7.15,8.3c1.19,1.38,0.7,3.25,0.53,4.87
+	c-0.27,2.59,0.02,3.96,0.89,6.39l0.74,2.13l-0.92-0.04L960,328.5l-1,2l5.5,0.5l-2,6h-18c1.07-1.07-0.93-3.07-2-2l-2-16
+	c-1.07,1.07-3.07-0.93-2-2c-42.4-3.42-29.48,35.3-32,58c15.14,11.36,14,42.96,14,58c-2.65,2.69-4.11,0.75-4.04,4.57l0.04,3.43
+	c-11.08,0.02-23.29,1.52-34-2c-0.31-4.79-18.95-18.53-24-22c-65.84-1.48-15.92,23.97-56,32c-53.07,10.63-29.84-52.94-106,42l-14-2
+	l-6-6l-30,2l-32,26c-3.38-5.84-8.92-10.43-19-13c-14.09-14.63-39.02-61.51-40-62c2.35-3.01-11.05-13.05-14-16
+	c11.9-45.15-82.74-27.31-92-36l-16-16c-1.52-1.52-4.81-9.81-8-8c-26.35-40.04-84.12-39.54-128-58
+	C297.77,301.73,302.56,293.28,311.6,299.7z" />
+                                        </clipPath>
+                                        <image clip-path="url(#image-clipper4)" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg" x="100" y="0" role="image" title="Crowsnest Pass"></image>
+                                    </a>
+                                </g>
+                                <g id="LittleIsland5">
+                                    <a xlink:href="" title="Island" accesskey="a">
+                                        <clipPath id="image-clipper5">
+                                            <path id="CA-AB" d="M614.92,517.24c7.66,17.36-9.96,45.09-8.42,60.76c-5.78,4.5-11.02,11.32-14,18c-5.16,2.27-17.85,15.11-22,14v16
+	c-10.9,6.54-16.92,35.07-28,42c0.75,14.67-1.32,31.19-1.87,46.82c0,0,2.89-2.55,3.08-2.44l0.94,0.54c0.31,0.18,0.43,0.38,0.81,0.42
+	c8.01,1.03,6.2-7.53,27.28-1.52l0.23,0.11l-0.18-0.08l-0.23-0.11l-0.87-0.37c4.88,2.41,7.86,7.27,12.61,9.88
+	c8.5,4.68,19.54,4.03,28.78,6.99c6.99,2.25,12.18,3.93,19.53,2.03c1.67-0.43,3.12-1.5,4.57-2.36c2.53-1.51,5.31-3.21,8.38-2.97
+	c2.79,0.22,5.57,0.69,8.38,0.58c0.35-0.01,0.7-0.03,1.06-0.06l2,0.04c0,0,2.27,0.05,3.35-0.45c0.86-0.41,1.67-0.92,2.4-1.57
+	l12.33-10.95c2.28-2.02,3.28-4.99,4.57-7.67c2.5-5.21,3.37-4.47,8.81-4.53c1.69-0.01,2.77-0.64,4.02-1.72
+	c3.01-2.6,5.94-5.15,9.86-6.19c1.4-0.38,2.87-0.54,4.16-1.26c1.55-0.86,2.8-2.18,4.01-3.44c1.38-1.42,1.52-3.5,1.84-5.34
+	c0.16-0.92,0.26-1.91,0.83-2.68c0.61-0.82,1.61-1.25,2.16-2.12c1.12-1.75,1.76-4.1,3.8-5.04c2.07-0.95,4.31,0.08,6.4,0.33l0.88-0.01
+	c1.21,0.13,2.34,0.72,3.18,1.59l1.08,1.23c1.51,1.54,4.03,1.29,5.51,2.87c2.2,2.35,3.98,5.04,6.1,7.45c0.48,0.55,1.06,1.17,1.8,1.36
+	c6.21,1.63,8.76,0.09,14.64-1.68c2.57-0.77,4.13-0.6,6.55,0.69c2.21,1.17,0.7,0.64,2.95,1.74c0.87,0.42,1.45,0.44,2.25,1l6.08,4.28
+	l0.61,0.44c0.91,0.36,3.96,1.25,4.92,1.41l7.77,1.11l12.19,2.01c1.11,0.19,2.05,0.87,3,1.4c2.91,1.62,1.62,0.98,4.73,2.18
+	c2.37,0.92,1.84,0.66,4.1,1.82c2.27,1.17,1.68,1.04,4.12,1.83c1.06,0.34,2.22,0.19,3.3,0.13c5.12-0.3,6.98-0.06,7.07-5.61
+	c0.1-5.67-1.89-11.12-5.22-15.67l-0.51-0.58c-0.81-1.35-1.27-3.45,0.05-4.66c1.27-1.17,3.2-0.41,4.37,0.5
+	c1.62,1.27,2.73,3.04,4.05,4.58l7.88,9c1.67,1.92,2.73,4.51,2.41,7.08c-0.16,1.25-0.54,2.53-0.34,3.8c0.46,3.04,2.94,5.18,5.39,6.73
+	c1.41,0.89,3,1.54,4.22,2.72c2.28,2.21,4.28,5.35,7.67,5.9c0.92,0.15,1.95-0.02,2.81,0.42c2.12,1.08,2.07,3.7,2.39,5.73
+	c0.62,4.02,2.04,4.81,5.58,6.52c3.07,1.48,3.69,1.71,4.18,5.16c0.19,1.36,0.14,3.02,1.09,4.15l20.69,24.57
+	c0.98,1.16,2.57,1.21,3.96,1.28c1.52,0.08,3.34,0.01,4.42,1.29l11.86,14.04c1.32,1.56,3.91,1.85,5.48,0.5l5.03-4.31
+	c0.79-0.68,1.26-1.69,1.31-2.72l-0.01-1.18c0.05-1.68,0.3-3.59,1.69-4.73c3.61-2.95,7.39-5.73,10.73-9
+	c0.76-0.74,1.02-1.85,1.01-2.87c-0.01-0.94-0.18-1.9-0.04-2.85c0.16-1.06,0.29-1.77,0.7-2.77l2.02-4.68
+	c0.61-1.33,1.78-2.29,2.72-3.37c1.05-1.19,1.86-2.67,1.96-4.28l-0.03-1.59c0.03-1.54,0.33-3.07,0.92-4.49l1.71-3.96
+	c0.4-0.88,1.09-1.58,1.63-2.37c1.48-2.18,2.59-4.57,3.75-6.93c0.91-1.84,1.68-3.94,3.39-5.22c0.72-0.53,1.64-0.95,2.09-1.77
+	c1.76-3.22,3.23-6.82,3.34-10.54c0.09-3.36-1.59-6.19-2.85-9.21c-0.85-2.04-1.41-4.5,0.1-6.4c1.16-1.45,3.26-0.95,4.75-0.47
+	c0.66,0.22,1.4,0.7,2.14,0.43c3.13-1.13,5.14-4.59,4.76-7.86c-0.31-2.6-1.26-5.06-1.93-7.57c-0.7-2.62-1.3-6.14,1.07-8.15
+	l10.43-8.84c0.59-0.5,1.38-0.64,2.12-0.74l6.97-0.83c5.22-0.75,8.87-5.11,11.54-9.3c0.4-0.63,0.71-1.36,1.28-1.86
+	c2.41-2.12,4.98-4.09,7.13-6.49c0.68-0.75,0.87-1.81,0.88-2.79l-0.03-1.57c0.07-1.27,0.89-2.24,1.48-3.29
+	c1.53-2.75,1.98-4.69,2.28-7.78c0.11-1.1,0.1-2.2,0.76-3.14c1.13-1.61,2.71-2.85,4.36-3.88c1.22-0.77,2.6-1.38,4.07-1.43
+	c1.38-0.05,1.52,0.17,2.9,0.03c2.57-0.27,4.99-1.25,7.26-2.42c1.27-0.66,2.46-1.56,3.19-2.81c1.13-1.97,1.69-4.2,2.54-6.29
+	c0.76-1.86,2.16-3.38,3.74-4.57c1-0.75,0.94-0.5,1.9-1.31l10.21-8.71c1.73-1.48,1.31-3.98,0.55-5.84c-0.33-0.81-0.96-1.55-0.97-2.46
+	c-0.03-1.94,0.64-3.9,0.17-5.83c-0.71-2.92-1.68-5.78-2.75-8.59c-0.61-1.57-1.81-2.82-2.35-4.42c-1.69-5.06-0.65-10.45-0.31-15.62
+	c0.15-2.16-0.19-4.26-0.53-6.39c-0.54-3.36-1.38-6.72-0.74-10.13c0.36-1.97,1.03-4.01,0.74-6.05l-0.84-5.76
+	c-0.15-1.07-0.63-2.06-0.98-3.07c-1-2.91-1.94-6.03-0.71-9.03c0.3-0.74,0.82-1.42,1-2.22c0.19-0.78-0.03-1.54-0.06-2.33
+	c-0.04-0.88,0.05-1.07,0.2-1.93c0.22-1.29,0.56-2.83-0.29-3.97c-1.71-2.33-3.65-4.47-5.66-6.54c-0.54-0.55-1.36-0.57-2.05-0.77
+	c-3.4-1.01-6.98-2.31-8.86-5.55c-0.47-0.83-0.43-1.89-0.09-2.76c0.57,0.01,1.97,0.14,2.52,0.36c0.81,0.31,1.97,1.49,2.95,0.84
+	c2.02-1.33,3.96-3,4.96-5.26c1.36-3.1,1.64-6.54,2.29-9.82c0.3-1.54,1.15-2.82,1.94-4.14c1.55-2.57,3.26-4.7,0.88-7.43l-17.39-20.03
+	c-1.29-1.49-3.28-0.89-4.9-0.4c-2.57,0.77-2.77,0.91-4.87-0.69c-4.62-3.54-7.96-5.56-13.25-8c-3.15-1.46-1.08-0.47-4.08-2.21
+	c-2.39-1.39-3.42-1.48-6.13-1.39c-2.89,0.09-3.76-0.62-4.86-3.24c-0.54-1.26-1.02-2.55-2.16-3.41c-4.27-3.23-5.96-3.04-3.81-8.41
+	c0.42-1.07,1.13-2.12,1.1-3.32c-0.09-3.56-0.36-7.81-0.74-11.34c-0.37-3.53-3.47-5.93-6.31-7.58c-0.68-0.4-1.48,0.04-2.16,0.14
+	c-1.74,0.25-0.97,0.04-2.69-0.13c-1.69-0.17-3.48,0.12-4.88,1.14l-3.96,3.06l-2.97-5.07c-1.14-1.94-0.49-4.59,1.19-6.01
+	c2.9-2.45,5.97-4.73,8.64-7.45c0.72-0.73,1.08-1.87,0.73-2.86c-0.53-1.53-6.73,0.31-7.75-0.89c-0.74-0.86-1.63-1.72-1.97-2.84
+	c-0.57-1.87-2.48-3.87-3.09-5.73c-1.03-3.18-2.59-6.13-4.11-9.1L954.3,346h-15.8c1.07-1.07,3.07-7.07,2-6c0,0-5.07-16.93-4-18
+	c-31.5-1.5-21.48,28.3-24,51c15.14,11.36,14,49.96,14,65c-2.65,2.69-4.11,0.75-4.04,4.57l0.04,3.43c-11.08,0.02-30.29,2.52-41-1
+	c-0.31-4.79-16.95-18.53-22-22c-55.5-6.5-15.92,23.97-56,32c-53.07,10.63-29.84-52.94-106,42l-14-2l-6-6l-30,2l-29.04,23.59
+	L614.92,517.24z" />
+                                        </clipPath>
+                                        <image clip-path="url(#image-clipper5)" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg" x="300" y="0" role="image" title="Crowsnest Pass"></image>
+                                    </a>
+                                </g>
+                                <g id="LittleIsland6">
+                                    <a xlink:href="" title="Island" accesskey="a">
+                                        <clipPath id="image-clipper6">
+                                            <path id="CA-AB" d="M289.38,303.1c-6.43,4.25-5.83,16.53-3.75,23.06c2.22,6.98-2.17,8.41-7.64,15.09l-0.34-0.13c-6.07-1.65-12.74,1.11-14.29,7.59
+	c-0.43,1.77-0.39,3.62-0.34,5.43l-0.02-0.57v-0.26l0.04,1.24c-26.68-1.41-10.63,20.35-16.22,30.9c-1.05,1.97-3.58,3.24-4.83,5.48
+	c-4.32,7.73-8.39,8.74-14.87,14.06c-1.8,1.47-1.13,6.26-1.38,8.21c-0.31,2.38-1.47,4.63-1.89,6.99c-0.08,0.45-4.62-1.69-9.1-1.66
+	c-16.65,0.07-9.47,22.15-17.07,33.71c-3.08,4.68-2.98,11.18-7.09,15.13c-3.5,3.36-10.36,8.74-11.38,13.78
+	c-2.71,13.51,2.05,23.82-3.75,37.57c-1.51,3.56,1.44,8.09-0.72,11.25c0.27-0.24-6.21-0.17-7.18,0.58c-0.97,0.76-1.49,1.97-2.47,2.72
+	c-1.84,1.42-3.96,2.35-5.68,3.93c-3.09,2.84-6.16,6.41-9.91,8.52c-3.29,1.85-6.87,3.12-10.62,3.62c-0.93,0.12-0.84-0.63-2.88-0.17
+	c0,0-1.93,2.48-1.81,2.74c0.43,0.93,1.49,3.2,1.83,3.78c0.72,1.26,0.93,2.9,0.97,4.27c0.06,2.29-0.28,4.75,0.59,6.95
+	c0.83,2.09,2.7,3.48,4.1,5.15c0.75,0.89,1.12,2.02,1.6,3.05l2.01,4.19c0.79,1.7,1.57,3.42,2.04,5.25l1.48,5.99l0.75,3.87
+	c0.39,1.98,1.04,3.86,2.13,5.57c2.78,4.35,5.39,7.63,5.64,13c0.08,1.71-0.08,3.44,0.23,5.14c0.48,2.55,2.56,4.29,4.02,6.29
+	c1.11,1.54,1.74,3.34,2.02,5.21c0.23,1.54,0.29,3.12,0.68,4.63l1.49,5.73c0.43,1.63,1.22,3.13,1.91,4.66
+	c3.14,6.87,1.85,3.89,4.66,10.9l-0.06,0.5l0.66,5.18c0.09,0.66,0.37,1.31,0.28,1.98c-0.64,4.6-1.66,9.13-2.51,13.69
+	c-0.36,1.92,0.84,3.18,2.13,4.44c1.38,1.36,1.47,1.36,0.96,3.28c-0.28,1.08-0.87,2.41-0.04,3.41l3.3,3.86
+	c1.93,2.22,4.12,4.6,7.12,5.26c1.17,0.27,2.39,0.02,3.57,0.05c1.25,0.02,2.4,0.65,3.37,1.4c1.11,0.86,1.69,1.34,2.63,2.39
+	c1.89,2.09,1.02,4.07-0.5,6.03c-1.24,1.59-2.73,3.2-1.42,5.25l7.06,10.95c1.92,2.99,4.23,5.71,6.55,8.4l15.3,17.78
+	c2.46,2.86,6.28,2.79,9.71,2.99c1.61,0.09,3.2,0.3,4.69,0.96l5.73,2.6l4.7,2.22c2.25,1.03,4.89,0.87,7.15-0.04l2.51-1.17l9.42-3.38
+	c0.37-0.13,0.49-0.41,0.8-0.61c1.8-1.16,3.64-2.33,5.69-3.02c2.66-0.9,3.29-0.95,5.98-1.75l5.05-1.54c1.78-0.51,3.67-0.75,5.35-1.59
+	l4.03-2.14l10.91-5.06c0.63-0.31,0.86-1.03,1.44-1.41c1.1-0.7,2.25-1.39,3.53-1.71l7.72-1.89c1.08-0.26,1.35-0.25,2.45-0.21
+	l4.08,0.22l15.72,0.97c0.93,0.07,1.08,0.28,1.95,0.57c4.91,1.63,10.23,3.4,15.46,2.26c3.19-0.7,4.67-4.06,7.43-5.51
+	c7.57-3.97,15.41-8.09,23.76-10.2c4.48-1.12,9.14,0.11,13.67-0.08l0.12-0.02l-0.72,0.15c2.26-0.6,4.52-1.3,6.8-1.79l2.52-0.51
+	c7.58-1.4,14.36,3.95,21.77,2.8c2.3-0.36,5.31-1.8,7.61-0.61c4.86,2.53,5.41,4.13,8.88,7.17c0.59,0.52,1.56-0.3,2.35-0.39
+	c8.6-0.89,13.68,1.63,20.47,6.58c2.37,1.72,1.3,1.14,3.84,1.28c5.67,0.33,10.91,2.43,15.33,5.99c1.45,1.17,2.78,2.59,3.92,4.07
+	c1.1,1.43,0.42,1.29,2.71,0.87c8.62-1.56,17.69-12.15,19.87-20.34c0.61-2.29,0.78-4.51,0.86-6.89l-0.02-2.7
+	c0.1-4.04,12.17-8.71,12.17-8.71s4.89,0.09,7.34,1.34c1.22,0.62-0.29-2.64-0.12-6.14c0.68-14.67,1.83-23.34,1.13-37.02
+	c11.08-6.93,17.1-35.46,28-42v-16c4.15,1.11,16.84-11.73,22-14c2.98-6.68,8.22-13.5,14-18c-2.07-21.02,30.33-63.71-10-74
+	c-14.09-14.63-39.02-61.51-40-62c2.35-3.01-11.05-13.05-14-16c3.96-43.38-78.75-21.94-92-36l-16-16c-1.52-1.52-4.81-9.81-8-8
+	c-26.35-40.04-82.12-38.54-126-57c1.07-1.07-2.93-5.07-4-4l-1.5,0.3" />
+                                        </clipPath>
+                                        <image clip-path="url(#image-clipper6)" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg" x="-100" y="0" role="image" title="Crowsnest Pass"></image>
+                                    </a>
+                                </g>
+                            </g>
+
+                        </svg>
+                </section>
+                <section>
+                    <pre><code>&lt;g id="island"&gt;
+&lt;a xlink:href="http://onclick.go.here/" 
+            title="Island" accesskey="a"&gt;
+ &lt;clipPath id="island-clipper"&gt;
+     &lt;path d="M...z"/&gt;
+ &lt;/clipPath>
+ &lt;image clip-path="url(#island-clipper)" 
+        width="1600" height="800" 
+        xlink:href="img/poster-snorkeling.jpg"&gt;
+ &lt;/image&gt;
+&lt;/a&gt;
+&lt;/g&gt;</code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>ANIMATED TEXT ON PATH</h2>
+                    <svg id="Untitled-Page%201" viewBox="0 0 1600 988" style="background-color:#ffffff00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="1600px" height="988px">
+                        <g id="Untitled-Page%25201" transform="scale(0.5)">
+                            <g id="Background">
+                                <image overflow="visible" y="200" width="1600" height="800" xlink:href="img/poster-snorkeling.jpg"></image>
+                                <path transform="translate(0,170)" id="curve3" d="M 0 286 C 0 286 17.3676 320.7826 49 343 C 80.6324 365.2174 96.5296 446.8142 87 474 C 77.4704 501.1858 130.3478 544.8617 213 425 C 213 425 230.9644 398.4506 389 468 C 389 468 443.0751 493.6838 533 367 C 622.9249 240.3162 671.2806 311.5889 689 272 C 706.7194 232.4111 747.9842 203.4229 740 161 C 732.0158 118.5771 844.3004 112.664 868 84 C 891.6996 55.336 774.7036 47.4308 805.9005 17.9002 C 816.3621 7.9973 831.7004 1.899 840.5192 1.899 C 857.7956 1.899 872.8113 15.4024 894.0754 22.6302 C 939.1304 37.9447 958.1028 36.3636 1002.9148 22.6302 C 1024.3879 16.0493 1039.1937 1.899 1058.1981 1.899 C 1075.4735 1.899 1090.5343 15.2718 1111.7533 22.6302 C 1160.4744 39.5257 1184.1897 39.5257 1220.5928 22.6302 C 1240.9644 13.1752 1256.8726 1.899 1275.8761 1.899 C 1293.1525 1.899 1308.4373 14.6554 1329.4323 22.6302 C 1373.9131 39.5257 1394.4664 39.5257 1438.2717 22.6302 C 1459.2258 14.5482 1474.5515 1.899 1493.5551 1.899 C 1510.8303 1.899 1544.3397 33.2016 1566.7985 33.2016 C 1571.1462 33.2016 1588.1031 29.4778 1600 22.1344 " stroke="#000000" stroke-width="2" fill="none" />
+                                <text xmlns="http://www.w3.org/2000/svg" id="T" style="font-family:arial;font-size:56; fill: #888">
+                                    <textPath xlink:href="#curve3" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="10">
+                                        <animate attributeName="startOffset" dur="20s" from="0" to="1500" repeatCount="indefinite" />Featured location: Dominica
+                                        <!-- Known as "Nature Isle of the Caribbean" because of its unspoiled natural beauty, Dominica offers a world to explore by land and sea. The island, situated in the Lesser Antilles region of the Caribbean, is home to Champagne Reef—a premier dive site. The water starts shallow at the coast and extends to deeper seas, offering exceptional snorkeling and scuba diving, depending on experience level and interest. -->
+                                    </textPath>
+                                </text>
+                                <path id="mywaves" transform="translate(550,650) scale(0.8)" d="M 1 58.8904 C 29.869 75.1591 77.39 76.5198 107.1426 61.9296 L 207.4002 12.7648 C 237.1528 -1.8254 284.4456 -0.0679 313.0333 16.6904 L 383.5095 58.004 C 412.0972 74.7623 459.9937 77.8402 490.4912 64.8788 L 620.0515 9.8156 C 650.549 -3.1458 699.2979 -1.6395 728.937 13.18 L 825.6057 61.5144 C 855.2448 76.3339 902.6106 75.0478 931.4017 58.6416 L 1006.141 16.0528 C 1034.9321 -0.3534 1081.3766 0.0491 1109.8792 16.9518 L 1178.6636 57.7426 C 1207.1661 74.6453 1252.4375 73.173 1279.7816 54.4543 M 1 205.8904 C 29.869 222.1591 77.39 223.5198 107.1426 208.9296 L 207.4002 159.7648 C 237.1528 145.1746 284.4456 146.9321 313.0333 163.6904 L 383.5095 205.004 C 412.0972 221.7623 459.9937 224.8402 490.4912 211.8788 L 620.0515 156.8156 C 650.549 143.8542 699.2979 145.3605 728.937 160.18 L 825.6057 208.5144 C 855.2448 223.3339 902.6106 222.0478 931.4017 205.6416 L 1006.141 163.0528 C 1034.9321 146.6466 1081.3766 147.0491 1109.8792 163.9518 L 1178.6636 204.7426 C 1207.1661 221.6453 1252.4375 220.173 1279.7816 201.4543 M 1 352.8904 C 29.869 369.1591 77.39 370.5198 107.1426 355.9296 L 207.4002 306.7648 C 237.1528 292.1746 284.4456 293.9321 313.0333 310.6904 L 383.5095 352.004 C 412.0972 368.7623 459.9937 371.8402 490.4912 358.8788 L 620.0515 303.8156 C 650.549 290.8542 699.2979 292.3605 728.937 307.18 L 825.6057 355.5144 C 855.2448 370.3339 902.6106 369.0478 931.4017 352.6416 L 1006.141 310.0528 C 1034.9321 293.6466 1081.3766 294.0491 1109.8792 310.9518 L 1178.6636 351.7426 C 1207.1661 368.6453 1252.4375 367.1731 1279.7816 348.4543 " stroke="#000000" stroke-width="2" fill="none" />
+                                <text xmlns="http://www.w3.org/2000/svg" id="T" style="font-family:arial;font-size:32; fill: #ddd">
+                                    <textPath xlink:href="#mywaves" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="10">
+
+                                        Known as "Nature Isle of the Caribbean" because of its unspoiled natural beauty, Dominica offers a world to explore by land and sea. The island, situated in the Lesser Antilles region of the Caribbean, is home to Champagne Reef.
+                                    </textPath>
+                                </text>
+                            </g>
+                        </g>
+                    </svg>
+
+                </section>
+                <section>
+                    <span>Draw</span>
+
+                    <pre><code >//Define your path
+&lt;path id="curve" d="M ... " stroke="#000000"/&gt;
+
+//Get your text on the path
+&lt;text xmlns="http://www.w3.org/2000/svg" &gt;
+&lt;textPath xlink:href="#curve" 
+        xmlns:xlink="http://www.w3.org/1999/xlink" 
+        startOffset="10"&gt;
+&lt;animate attributeName="startOffset" dur="20s" 
+     from="0" to="1500" repeatCount="indefinite"/&gt;
+        Featured location: Dominica
+&lt;/textPath&gt;
+&lt;/text&gt;
+</code>
+</pre>
+
+                </section>
+            </section>
+            <section>
+                <h2>MORE INTERACTIONS</h2>
+<!--
+                <button id="startMotionAnimation1">Start</button>
+                <button id="motionAnimation1">Show bird</button>
+                <button id="hidemotionAnimation1">Hide bird</button>
+-->
+                <!-- <div> -->
+                <svg id="interactivePath" viewBox="0 0 900 500"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="900px" height="500px">
+                    <defs>
+                        <path id="pathForDrawing" d="M -4 482  " stroke="#000000" stroke-width="2" fill="none" />
+                    </defs>
+                    <rect x="0" y="0" width="900" height="500" id="svgCanvasForPath" fill="#eee"  transform="translate(0,55)"></rect>
+
+                    <g transform="translate(100,0)">
+                            <g id="startMotionAnimation1" transform="translate(150, 0)" style="cursor: pointer;">
+                                <rect x="0" y="10" width="100" height="40"  fill="#aaa"></rect>
+                                <text x="35" y="36" font-family="Source Sans Pro" font-size="16" fill="#eee">Start</text>
+                            </g>
+                            <g id="motionAnimation1" transform="translate(150, 0)" style="cursor: pointer;">
+                                <rect x="150" y="10" width="100" height="40" fill="#aaa"></rect>
+                                <text x="170" y="36" font-family="Source Sans Pro" font-size="16" fill="#eee">Show Bird</text>
+                            </g>
+                            <g id="hidemotionAnimation1" transform="translate(150, 0)" role="button" style="cursor: pointer;">
+                                <rect x="300" y="10" width="100" height="40" fill="#aaa"></rect>
+                                <text x="320" y="36" font-family="Source Sans Pro" font-size="16" fill="#eee" style="pointer-events: none;
+">Hide Bird</text>
+                            </g>
+                            </g>
+                    <g class="bird" visibility="hidden" transform="translate(0,55)">
+                        <g class="right_bird">
+                            <path d="M 55.7253 29.7687 C 55.7253 29.7687 57.6913 29.8964 58.8608 28.9026 C 60.8882 27.181 62.7339 25.2024 64.9175 23.7161 C 74.3452 17.2981 86.8237 21.2591 90.8784 31.9339 C 91.6069 33.848 95.9233 39.0003 95.9233 39.0003 C 95.9233 39.0003 92.1571 38.636 91.0321 39.7708 C 87.1903 41.4339 82.2261 47.4124 80.5874 51.2845 C 71.6675 72.3597 48.8647 81.2835 27.7534 72.0862 C 15.7847 66.8724 6.81 58.7523 2.1763 46.2669 C 0.562 41.9183 0.4849 37.4603 0.8765 32.9534 C 0.9702 31.8714 1.8872 29.8187 1.8872 29.8187 C 1.8872 29.8187 4.0229 30.3763 4.8501 31.138 C 7.7681 33.8255 11.3052 35.1155 15.1196 35.8235 C 15.8006 35.9506 16.8606 35.7153 17.4676 35.5522 C 17.4676 35.5522 39.8076 43.8289 55.7253 29.7687 Z" fill="#ed5c26" />
+                            <path id="Ellipse" d="M 75.6987 33.7708 C 75.6987 31.5616 77.4896 29.7708 79.6987 29.7708 C 81.9079 29.7708 83.6987 31.5616 83.6987 33.7708 C 83.6987 35.98 81.9079 37.7708 79.6987 37.7708 C 77.4896 37.7708 75.6987 35.98 75.6987 33.7708 Z" fill="#ffffff" />
+                        </g>
+                        <g id="rightwing" class="right_wing">
+                            <path d="M 17.4773 41.5496 L 17.937 41.4153 C 17.937 41.4153 18.0737 39.6331 17.5444 38.7552 C 10.2065 26.594 21.6548 1.6819 21.6548 1.6819 L 22.4018 0.7669 C 22.4018 0.7669 33.8013 6.9759 38.8276 9.5833 C 47.8843 14.2825 55.4653 22.0784 55.1802 33.8187 C 55.1585 34.7105 55.3221 35.2999 55.6096 35.6476 C 55.6096 35.6476 39.9642 58.7087 17.4773 41.5496 Z" fill="#ed5c26" />
+                            <path d="M 37.1577 40.7815 C 44.6421 40.8606 48.4448 35.1155 45.727 28.0179 C 43.3071 21.6937 38.1919 18.6175 32.2554 16.4798 C 29.2953 15.4138 26.2743 15.7672 26.2743 15.7672 C 26.2743 15.7672 24.4741 18.2773 24.0132 21.4925 C 22.4409 32.4583 28.0474 40.6849 37.1577 40.7815 Z" fill="#ffffff" />
+                        </g>
+                        <animateMotion id="animatedMotionPath" begin="startMotionAnimation1.click" dur="5s">
+                            <mpath xlink:href="#pathForDrawing" />
+                        </animateMotion>
+                        <set attributeName="visibility" from="hidden" to="visible" begin="motionAnimation1.click" end="hidemotionAnimation1.click" />
+                    </g>
+                    <g transform="translate(0,55)">
+                        <use xlink:href="#pathForDrawing">
+                    </use>
+                    </g>
+                </svg>
+                <div>
+                </div>
+            </section>
+            <section>
+                <h2>BROWSER SUPPORT</h2>
+                <div>
+                    <br>
+                </div>
+                <div>
+                    <img src="img/caniuse.png" width="800px" style="border:none">
+                </div>
+            </section>
+            <section>
+                <h3>What should you not do with Inline SVG?</h3>
+                <div>
+                    <ul>
+                    </ul>
+                </div>
+                <div>
+                    <br>
+                </div>
+            </section>
+            <section>
+                <h3>References</h3>
+                <div>
+                    <ul>
+                        <li>http://www.w3.org</li>
+                        <li>https://developer.mozilla.org/</li>
+                        <li>http://www.nytimes.com/newsgraphics/2013/10/13/russia/</li>
+                        <li>http://srufaculty.sru.edu/</li>
+                        <li>http://www.subcide.com/experiments/fail-whale/</li>
+                        <li>http://caniuse.com/svg-html5</li>
+                    </ul>
+                </div>
+                <div>
+                    <br>
+                </div>
+            </section>
+            <section>
+                <a href="https://hasgeek.tv/metarefresh/2014/870-modern-web-graphics-design-using-svg">Video Recording</a>
+            </section>
+        </div>
+
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available here:
+             // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {
+                        src: 'lib/js/classList.js',
+                        condition: function () {
+                            return !document.body.classList;
+                        }
+                    },
+                    {
+                        src: 'plugin/markdown/marked.js',
+                        condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }
+                    },
+                    {
+                        src: 'plugin/markdown/markdown.js',
+                        condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }
+                    },
+                    {
+                        src: 'plugin/highlight/highlight.js',
+                        async: true,
+                        callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    },
+                    {
+                        src: 'plugin/zoom-js/zoom.js',
+                        async: true,
+                        condition: function () {
+                            return !!document.body.classList;
+                        }
+                    },
+                    {
+                        src: 'plugin/notes/notes.js',
+                        async: true,
+                        condition: function () {
+                            return !!document.body.classList;
+                        }
+                    }
+    ]
+            });
+        </script>
+
+</body>
+
 </html>

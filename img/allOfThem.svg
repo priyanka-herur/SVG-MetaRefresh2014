@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-142.6 0 899.1 873.5" enable-background="new -142.6 0 899.1 873.5" xml:space="preserve">
+	 
+<circle opacity="0.8" fill="#ED1C24" enable-background="new    " cx="131.9" cy="284.7" r="274.5"/>
+<circle opacity="0.8" fill="#00AEEF" enable-background="new    " cx="482" cy="274.5" r="274.5"/>
+<circle opacity="0.8" fill="#F7941E" enable-background="new    " cx="308.6" cy="598.9" r="274.5"/>
+<text transform="matrix(1 0 0 1 -72.473 298.0545)" fill="#FFFFFF" style="font-family: 'Source Sans Pro', sans-serif; font-weight:900" font-size="95.2448">HTML</text>
+<text transform="matrix(1 0 0 1 477.9785 298.0545)" fill="#FFFFFF" style="font-family: 'Source Sans Pro', sans-serif; font-weight:900" font-size="95.2448">CSS</text>
+<text transform="matrix(1 0 0 1 232.8282 685.6467)" fill="#FFFFFF" style="font-family: 'Source Sans Pro', sans-serif; font-weight:900" font-size="95.2448">SVG</text>
+<text transform="matrix(1 0 0 1 369.9569 494.1612)" fill="#594A42" style="font-family: 'Source Sans Pro', sans-serif; font-weight:900" font-size="47.6224">Effects</text>
+<text transform="matrix(1 0 0 1 244.7434 265.2189)" fill="#92278F" style="font-family: 'Source Sans Pro', sans-serif; font-weight:900" font-size="47.6224">Styles</text>
+<text transform="matrix(1 0 0 1 81.4787 488.2038)" fill="#BE1E2D" style="font-family: 'Source Sans Pro', sans-serif; font-weight:900" font-size="47.6224">Graphics</text>
+<path fill="#92278F" d="M310.6,489.1"/>
+<g>
+	<path fill="#F9ED32" d="M308.8,479.5c0,0,5.6,9,22.7-13.8c17.1-22.8,60-73,67.2-121c7.2-48.1-104.2-49.6-87.9,2.3"/>
+	<path fill="#F9ED32" d="M314.6,480.5c0,0-5.9,9.1-23.9-13.9c-18-23-63.2-73.5-70.8-121.8s109.8-49.9,92.6,2.3"/>
+</g>
+</svg>
